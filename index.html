@@ -129,6 +129,17 @@
             background-size: 80px 80px, 80px 80px, auto, auto;
         }
 
+        .hero-watermark {
+            position: absolute;
+            right: -10vw;
+            top: 13vh;
+            width: min(76vw, 1180px);
+            opacity: 0.045;
+            filter: saturate(0.85);
+            pointer-events: none;
+            z-index: -1;
+        }
+
         .hero::before {
             content: "";
             position: absolute;
@@ -264,9 +275,9 @@
         }
 
         .hero-logo {
-            width: min(30vw, 390px);
+            width: min(28vw, 360px);
             max-width: 100%;
-            filter: drop-shadow(0 30px 72px rgba(199, 164, 90, 0.32));
+            filter: drop-shadow(0 30px 72px rgba(199, 164, 90, 0.38));
             position: relative;
             z-index: 1;
         }
@@ -407,6 +418,70 @@
             font-weight: 300;
         }
 
+        .brand-showcase {
+            padding: 0 3.5rem 6.5rem;
+            background: var(--ivory);
+        }
+
+        .brand-showcase-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 0.8fr 0.95fr;
+            gap: 1px;
+            background: rgba(17, 17, 17, 0.14);
+            border: 1px solid rgba(17, 17, 17, 0.14);
+        }
+
+        .brand-plate {
+            min-height: 360px;
+            display: grid;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(246, 240, 229, 0.74)),
+                var(--ivory);
+        }
+
+        .brand-plate.dark {
+            background:
+                linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+                linear-gradient(135deg, #11100e, #28231b);
+            background-size: 64px 64px, 64px 64px, auto;
+        }
+
+        .brand-plate img {
+            max-width: 78%;
+            max-height: 250px;
+            margin: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 24px 54px rgba(31, 24, 12, 0.18));
+        }
+
+        .brand-plate.dark img {
+            filter: drop-shadow(0 24px 54px rgba(199, 164, 90, 0.24));
+        }
+
+        .brand-plate.symbol img {
+            max-width: 58%;
+            opacity: 0.94;
+        }
+
+        .brand-plate::after {
+            content: attr(data-label);
+            position: absolute;
+            left: 2rem;
+            bottom: 1.6rem;
+            color: rgba(17, 17, 17, 0.42);
+            font-size: 0.72rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .brand-plate.dark::after {
+            color: rgba(255, 255, 255, 0.42);
+        }
+
         .features {
             color: #ffffff;
             background:
@@ -477,6 +552,11 @@
             position: relative;
             z-index: 1;
             filter: drop-shadow(0 28px 58px rgba(199, 164, 90, 0.26));
+        }
+
+        .feature-image .feature-wordmark {
+            max-width: min(82%, 430px);
+            opacity: 0.92;
         }
 
         .feature-list {
@@ -679,6 +759,7 @@
 
             .signal-strip,
             .services-grid,
+            .brand-showcase-grid,
             .principles,
             .info-grid {
                 grid-template-columns: 1fr;
@@ -747,6 +828,13 @@
                 width: min(66vw, 250px);
             }
 
+            .hero-watermark {
+                top: 18vh;
+                right: -42vw;
+                width: 135vw;
+                opacity: 0.035;
+            }
+
             .hero-mark::before {
                 width: min(72vw, 285px);
             }
@@ -774,6 +862,14 @@
 
             .services-grid {
                 margin-top: 3.2rem;
+            }
+
+            .brand-showcase {
+                padding: 0 1.25rem 5.8rem;
+            }
+
+            .brand-plate {
+                min-height: 250px;
             }
 
             .service-card {
@@ -805,7 +901,7 @@
     <header>
         <nav>
             <a href="#top" aria-label="Art&Soul top">
-                <img src="./Art-Soul-09.png" alt="Art&amp;Soul" class="logo-image">
+                <img src="./assets/brand/logo-assets/png/Art&amp;Soul-09.png" alt="Art&amp;Soul" class="logo-image">
             </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
@@ -819,6 +915,7 @@
 
     <main id="top">
         <section class="hero" aria-label="Art&Soul executive AI consulting">
+            <img src="./assets/brand/logo-assets/png/Art&amp;Soul-09.png" alt="" class="hero-watermark" aria-hidden="true">
             <div class="hero-content">
                 <div>
                     <div class="eyebrow">Executive AI Consulting</div>
@@ -832,7 +929,7 @@
                     </div>
                 </div>
                 <div class="hero-mark" aria-hidden="true">
-                    <img src="./Art-Soul-04.png" alt="" class="hero-logo">
+                    <img src="./assets/brand/logo-assets/png/Art&amp;Soul-14.png" alt="" class="hero-logo">
                 </div>
             </div>
 
@@ -900,11 +997,27 @@
             </div>
         </section>
 
+        <section class="brand-showcase" aria-label="Art&Soul visual identity">
+            <div class="container">
+                <div class="brand-showcase-grid">
+                    <div class="brand-plate dark" data-label="Gold horizontal mark">
+                        <img src="./assets/brand/logo-assets/png/Art&amp;Soul-09.png" alt="Art&amp;Soul gold horizontal logo">
+                    </div>
+                    <div class="brand-plate symbol" data-label="Gold symbol">
+                        <img src="./assets/brand/logo-assets/png/Art&amp;Soul-14.png" alt="Art&amp;Soul gold symbol">
+                    </div>
+                    <div class="brand-plate dark" data-label="Silver signature">
+                        <img src="./assets/brand/logo-assets/png/Art&amp;Soul-10.png" alt="Art&amp;Soul silver horizontal logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="features" class="features">
             <div class="container">
                 <div class="features-layout">
                     <div class="feature-image">
-                        <img src="./Art-Soul-04.png" alt="Art&amp;Soul">
+                        <img src="./assets/brand/logo-assets/png/Art&amp;Soul-05.png" alt="Art&amp;Soul" class="feature-wordmark">
                     </div>
 
                     <div>
