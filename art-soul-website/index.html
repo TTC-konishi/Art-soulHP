@@ -3,417 +3,427 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art&amp;Soul株式会社 | AIコンサルティング</title>
+    <meta name="description" content="Art&Soul株式会社は、経営戦略と生成AI実装を接続するエグゼクティブAIコンサルティングファームです。">
+    <title>Art&amp;Soul株式会社 | Executive AI Consulting</title>
     <style>
+        :root {
+            --ink: #111111;
+            --charcoal: #181715;
+            --graphite: #23211d;
+            --ivory: #f7f2e8;
+            --bone: #e6ded0;
+            --muted: #8c8374;
+            --gold: #c7a45a;
+            --gold-bright: #e2c782;
+            --line: rgba(199, 164, 90, 0.24);
+            --white-line: rgba(255, 255, 255, 0.16);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* ヘッダー */
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+            line-height: 1.7;
+            color: var(--ink);
+            background: var(--ivory);
+            overflow-x: hidden;
+            font-feature-settings: "palt";
+        }
+
+        a {
+            color: inherit;
+        }
+
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(26, 26, 26, 0.95);
-            backdrop-filter: blur(10px);
             z-index: 1000;
-            transition: all 0.3s ease;
+            background: rgba(14, 14, 13, 0.72);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(18px);
+            transition: background 0.35s ease, box-shadow 0.35s ease;
         }
 
         header.scrolled {
-            background: rgba(10, 10, 10, 0.98);
-            box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+            background: rgba(12, 12, 11, 0.94);
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.34);
         }
 
         nav {
-            max-width: 1600px;
+            max-width: 1500px;
             margin: 0 auto;
-            padding: 1.5rem 4rem;
+            padding: 1.15rem 3.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
         .logo-image {
-            height: 50px;
+            height: 44px;
             width: auto;
             display: block;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.22));
         }
 
         .nav-links {
             display: flex;
-            gap: 3.5rem;
+            gap: 3rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
-            color: rgba(255,255,255,0.85);
-            font-size: 0.95rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            transition: color 0.3s;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 0.78rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
             position: relative;
+            transition: color 0.25s ease;
         }
 
         .nav-links a::after {
-            content: '';
+            content: "";
             position: absolute;
-            bottom: -5px;
             left: 0;
-            width: 0;
+            bottom: -0.55rem;
+            width: 100%;
             height: 1px;
-            background: #d4af37;
-            transition: width 0.3s;
+            background: var(--gold-bright);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #d4af37;
+            color: var(--gold-bright);
         }
 
         .nav-links a:hover::after {
-            width: 100%;
+            transform: scaleX(1);
+            transform-origin: left;
         }
 
-        /* ヒーローセクション - テクスチャー背景 */
         .hero {
-            height: 100vh;
-            background: 
-                /* レザーテクスチャー風のノイズ */
-                repeating-linear-gradient(
-                    90deg,
-                    rgba(0,0,0,0.03) 0px,
-                    transparent 1px,
-                    transparent 2px,
-                    rgba(0,0,0,0.03) 3px
-                ),
-                repeating-linear-gradient(
-                    0deg,
-                    rgba(0,0,0,0.03) 0px,
-                    transparent 1px,
-                    transparent 2px,
-                    rgba(0,0,0,0.03) 3px
-                ),
-                /* 微細なグレインエフェクト */
-                radial-gradient(circle at 20% 30%, rgba(40,40,40,1) 0%, rgba(20,20,20,1) 50%, rgba(15,15,15,1) 100%),
-                /* ベース */
-                linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-            display: flex;
+            min-height: 100vh;
+            display: grid;
             align-items: center;
-            justify-content: center;
             position: relative;
+            isolation: isolate;
             overflow: hidden;
+            color: #ffffff;
+            background:
+                linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+                radial-gradient(ellipse at 50% 0%, rgba(199, 164, 90, 0.14), transparent 48%),
+                linear-gradient(135deg, #0a0a09 0%, #171511 42%, #252119 100%);
+            background-size: 80px 80px, 80px 80px, auto, auto;
         }
 
-        /* エンボス風のテクスチャーオーバーレイ */
         .hero::before {
-            content: '';
+            content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.02) 0%, transparent 50%),
-                radial-gradient(circle at 75% 75%, rgba(0,0,0,0.3) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 50%, transparent 0%, rgba(0,0,0,0.2) 100%);
-            pointer-events: none;
+            inset: 0;
+            z-index: -2;
+            opacity: 0.34;
+            background:
+                repeating-linear-gradient(28deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 8px),
+                repeating-linear-gradient(118deg, rgba(0, 0, 0, 0.24) 0 1px, transparent 1px 11px);
+            mix-blend-mode: soft-light;
         }
 
-        /* サブトルなゴールドのアクセント */
         .hero::after {
-            content: '';
+            content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 30% 40%, rgba(212, 175, 55, 0.03) 0%, transparent 40%),
-                radial-gradient(circle at 70% 60%, rgba(212, 175, 55, 0.02) 0%, transparent 40%);
+            inset: 8rem 6vw 5rem;
+            z-index: -1;
+            border: 1px solid rgba(226, 199, 130, 0.22);
+            border-left-color: rgba(255, 255, 255, 0.08);
+            border-right-color: rgba(255, 255, 255, 0.08);
             pointer-events: none;
         }
 
         .hero-content {
-            text-align: center;
-            color: white;
-            z-index: 1;
-            max-width: 1400px;
-            padding: 0 3rem;
+            width: min(1320px, calc(100% - 7rem));
+            margin: 0 auto;
+            padding-top: 7rem;
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.72fr);
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--gold-bright);
+            font-size: 0.76rem;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            margin-bottom: 1.8rem;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 58px;
+            height: 1px;
+            background: var(--gold-bright);
+        }
+
+        h1 {
+            max-width: 920px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(3.8rem, 7.6vw, 8.7rem);
+            line-height: 0.93;
+            font-weight: 400;
+            letter-spacing: 0;
+        }
+
+        .hero-copy {
+            max-width: 720px;
+            margin-top: 2.4rem;
+            color: rgba(255, 255, 255, 0.78);
+            font-size: clamp(1rem, 1.7vw, 1.28rem);
+            font-weight: 300;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 3.1rem;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 58px;
+            padding: 0 2rem;
+            text-decoration: none;
+            border: 1px solid var(--gold);
+            color: #17120b;
+            background: linear-gradient(135deg, #e6cf8b 0%, #bd9650 100%);
+            font-size: 0.86rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(199, 164, 90, 0.24);
+        }
+
+        .button.secondary {
+            color: rgba(255, 255, 255, 0.88);
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(255, 255, 255, 0.24);
+        }
+
+        .button.secondary:hover {
+            border-color: var(--gold-bright);
+            box-shadow: none;
+        }
+
+        .hero-mark {
+            position: relative;
+            display: grid;
+            place-items: center;
+            min-height: 520px;
+        }
+
+        .hero-mark::before,
+        .hero-mark::after {
+            content: "";
+            position: absolute;
+            border: 1px solid rgba(226, 199, 130, 0.25);
+        }
+
+        .hero-mark::before {
+            width: min(34vw, 420px);
+            aspect-ratio: 1;
+            transform: rotate(45deg);
+        }
+
+        .hero-mark::after {
+            width: min(30vw, 360px);
+            aspect-ratio: 1;
+            border-color: rgba(255, 255, 255, 0.12);
         }
 
         .hero-logo {
-            width: 400px;
-            height: 400px;
-            margin: 0 auto 4rem;
-            opacity: 0;
-            animation: fadeInLogo 1.8s ease forwards;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        @keyframes fadeInLogo {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .hero-logo img {
+            width: min(30vw, 390px);
             max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            filter: drop-shadow(0 20px 60px rgba(212, 175, 55, 0.4));
-            display: block;
-        }
-
-        .hero-divider {
-            width: 120px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #d4af37, transparent);
-            margin: 3rem auto;
-            opacity: 0;
-            animation: fadeIn 1s ease 0.6s forwards;
-        }
-
-        .hero p {
-            font-size: 1.6rem;
-            margin-bottom: 1.2rem;
-            opacity: 0;
-            color: rgba(255,255,255,0.95);
-            font-weight: 300;
-            letter-spacing: 4px;
-            animation: fadeInUp 1s ease 0.8s forwards;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.75);
-            font-weight: 300;
-            letter-spacing: 3px;
-            margin-bottom: 4.5rem;
-            opacity: 0;
-            animation: fadeInUp 1s ease 1s forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1.5rem 4rem;
-            background: transparent;
-            color: #d4af37;
-            text-decoration: none;
-            border: 2px solid #d4af37;
-            border-radius: 0;
-            font-weight: 400;
-            font-size: 1.05rem;
-            letter-spacing: 3px;
-            transition: all 0.4s ease;
+            filter: drop-shadow(0 30px 72px rgba(199, 164, 90, 0.32));
             position: relative;
-            overflow: hidden;
-            opacity: 0;
-            animation: fadeInUp 1s ease 1.2s forwards;
+            z-index: 1;
         }
 
-        .cta-button::before {
-            content: '';
+        .signal-strip {
             position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: #d4af37;
-            transition: left 0.4s ease;
-            z-index: -1;
-        }
-
-        .cta-button:hover::before {
-            left: 0;
-        }
-
-        .cta-button:hover {
-            color: #1a1a1a;
-            transform: translateY(-3px);
-            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 50px;
             left: 50%;
+            bottom: 0;
             transform: translateX(-50%);
-            opacity: 0;
-            animation: fadeIn 1s ease 1.5s forwards, bounce 2s ease-in-out 2s infinite;
+            width: min(1320px, calc(100% - 7rem));
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border: 1px solid rgba(226, 199, 130, 0.22);
+            border-bottom: none;
+            background: rgba(11, 11, 10, 0.76);
+            backdrop-filter: blur(18px);
         }
 
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            50% {
-                transform: translateX(-50%) translateY(10px);
-            }
+        .signal {
+            padding: 1.5rem 2rem;
+            border-right: 1px solid rgba(226, 199, 130, 0.16);
         }
 
-        .scroll-indicator::before {
-            content: '';
+        .signal:last-child {
+            border-right: none;
+        }
+
+        .signal strong {
             display: block;
-            width: 1px;
-            height: 50px;
-            background: linear-gradient(to bottom, transparent, #d4af37);
-            margin: 0 auto 10px;
+            color: #ffffff;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.65rem;
+            font-weight: 400;
+            line-height: 1;
+            margin-bottom: 0.55rem;
         }
 
-        .scroll-indicator span {
-            display: block;
-            font-size: 0.75rem;
-            color: rgba(255,255,255,0.5);
-            letter-spacing: 2px;
+        .signal span {
+            color: rgba(255, 255, 255, 0.56);
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
         }
 
-        /* サービス */
-        .services {
-            background: #f8f8f8;
-            padding: 10rem 4rem;
+        section {
+            padding: 8.5rem 3.5rem;
+            position: relative;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1320px;
             margin: 0 auto;
         }
 
-        .section-title {
-            font-size: 3.5rem;
-            font-weight: 200;
+        .section-kicker {
+            color: var(--gold);
+            font-size: 0.78rem;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
             margin-bottom: 1rem;
-            letter-spacing: 4px;
-            color: #1a1a1a;
+        }
+
+        .section-title {
+            max-width: 880px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.5rem, 5vw, 5.6rem);
+            line-height: 1;
+            font-weight: 400;
+            letter-spacing: 0;
+            color: var(--ink);
         }
 
         .section-subtitle {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 5rem;
+            max-width: 760px;
+            margin-top: 1.8rem;
+            color: #5e5549;
+            font-size: 1.08rem;
             font-weight: 300;
-            letter-spacing: 1px;
+        }
+
+        .services {
+            background:
+                linear-gradient(90deg, rgba(17, 17, 17, 0.055) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(17, 17, 17, 0.045) 1px, transparent 1px),
+                var(--ivory);
+            background-size: 72px 72px;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 5rem;
+            border-top: 1px solid rgba(17, 17, 17, 0.16);
+            border-left: 1px solid rgba(17, 17, 17, 0.16);
         }
 
         .service-card {
-            background: white;
-            padding: 3.5rem;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #d4af37, transparent);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
+            min-height: 330px;
+            padding: 2.6rem;
+            background: rgba(255, 255, 255, 0.36);
+            border-right: 1px solid rgba(17, 17, 17, 0.16);
+            border-bottom: 1px solid rgba(17, 17, 17, 0.16);
+            transition: background 0.3s ease, transform 0.3s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            background: rgba(255, 255, 255, 0.72);
+            transform: translateY(-4px);
         }
 
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            color: #d4af37;
+        .service-index {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--gold);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 0.98rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .service-index::after {
+            content: "";
+            width: 44px;
+            height: 1px;
+            background: var(--gold);
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: #1a1a1a;
-            font-weight: 400;
-            letter-spacing: 1px;
+            font-size: 1.36rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            margin-bottom: 1.2rem;
+            color: var(--ink);
         }
 
         .service-card p {
-            color: #666;
-            line-height: 1.9;
+            color: #61584c;
             font-weight: 300;
         }
 
-        /* 特徴 - テクスチャー背景 */
         .features {
-            padding: 10rem 4rem;
-            background: 
-                repeating-linear-gradient(
-                    90deg,
-                    rgba(0,0,0,0.02) 0px,
-                    transparent 1px,
-                    transparent 2px,
-                    rgba(0,0,0,0.02) 3px
-                ),
-                linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
-            position: relative;
+            color: #ffffff;
+            background:
+                linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+                linear-gradient(135deg, #11100f 0%, #1e1b17 55%, #2a251d 100%);
+            background-size: 88px 88px, 88px 88px, auto;
+            overflow: hidden;
         }
 
         .features::before {
-            content: '';
+            content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(40,40,40,0.5) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(30,30,30,0.5) 0%, transparent 50%);
+            inset: 0;
+            opacity: 0.28;
+            background:
+                repeating-linear-gradient(35deg, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 13px);
             pointer-events: none;
         }
 
@@ -423,253 +433,370 @@
         }
 
         .features .section-title {
-            color: #d4af37;
+            color: #ffffff;
         }
 
         .features .section-subtitle {
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.66);
         }
 
-        .features-grid {
+        .features-layout {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
+            grid-template-columns: minmax(280px, 0.78fr) 1fr;
+            gap: 5.5rem;
             align-items: center;
         }
 
         .feature-image {
-            width: 100%;
-            height: 600px;
-            background: 
-                radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 70%),
-                linear-gradient(135deg, rgba(30,30,30,0.8) 0%, rgba(20,20,20,0.8) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            min-height: 560px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--line);
             position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.01)),
+                rgba(255, 255, 255, 0.025);
         }
 
-        .feature-image::before {
-            content: '';
+        .feature-image::before,
+        .feature-image::after {
+            content: "";
             position: absolute;
-            width: 350px;
-            height: 350px;
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            animation: rotate 25s linear infinite;
+            inset: 3.2rem;
+            border: 1px solid rgba(226, 199, 130, 0.2);
         }
 
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
+        .feature-image::after {
+            inset: 5rem;
+            transform: rotate(45deg);
+            border-color: rgba(255, 255, 255, 0.12);
         }
 
         .feature-image img {
-            max-width: 350px;
-            max-height: 350px;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.4));
-            display: block;
+            max-width: min(70%, 360px);
             position: relative;
             z-index: 1;
+            filter: drop-shadow(0 28px 58px rgba(199, 164, 90, 0.26));
         }
 
         .feature-list {
             list-style: none;
+            margin-top: 3.8rem;
+            border-top: 1px solid var(--white-line);
         }
 
         .feature-list li {
-            padding: 2rem 0;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-            font-size: 1.1rem;
-            color: rgba(255,255,255,0.85);
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 2rem;
+            padding: 2.1rem 0;
+            border-bottom: 1px solid var(--white-line);
+            color: rgba(255, 255, 255, 0.68);
             font-weight: 300;
         }
 
-        .feature-list li strong {
+        .feature-list strong {
             display: block;
-            margin-bottom: 0.5rem;
-            color: #d4af37;
-            font-weight: 400;
-            letter-spacing: 1px;
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.45rem;
         }
 
-        .feature-list li::before {
-            content: "";
-            display: inline-block;
-            width: 30px;
-            height: 1px;
-            background: #d4af37;
-            margin-right: 1.5rem;
-            vertical-align: middle;
+        .feature-list span {
+            color: var(--gold-bright);
+            font-family: Georgia, "Times New Roman", serif;
         }
 
-        /* 会社情報 */
+        .approach {
+            background: #ffffff;
+            padding-top: 0;
+        }
+
+        .approach-band {
+            display: grid;
+            grid-template-columns: 0.8fr 1fr;
+            gap: 5rem;
+            padding: 7rem 0;
+            border-bottom: 1px solid rgba(17, 17, 17, 0.14);
+        }
+
+        .approach-text {
+            color: #5f564a;
+            font-size: 1.08rem;
+            font-weight: 300;
+        }
+
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            margin-top: 4rem;
+            background: rgba(17, 17, 17, 0.13);
+        }
+
+        .principle {
+            background: #ffffff;
+            padding: 2.4rem;
+        }
+
+        .principle span {
+            color: var(--gold);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.8rem;
+        }
+
+        .principle h3 {
+            margin: 1.8rem 0 0.9rem;
+            font-size: 1.15rem;
+            letter-spacing: 0.05em;
+        }
+
+        .principle p {
+            color: #645b50;
+            font-weight: 300;
+        }
+
         .company-info {
-            background: #1a1a1a;
-            color: white;
-            padding: 10rem 4rem;
+            color: #ffffff;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 38%),
+                var(--charcoal);
         }
 
         .company-info .section-title {
-            color: #d4af37;
+            color: #ffffff;
         }
 
         .company-info .section-subtitle {
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.62);
         }
 
         .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5rem;
+            gap: 1px;
+            margin-top: 5rem;
+            background: var(--white-line);
+            border: 1px solid var(--white-line);
         }
 
         .info-item {
-            padding: 2rem 0;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 2rem;
+            padding: 1.7rem 2rem;
+            background: var(--charcoal);
         }
 
         .info-label {
-            font-size: 0.85rem;
-            color: #d4af37;
-            margin-bottom: 0.8rem;
-            letter-spacing: 2px;
+            color: var(--gold-bright);
+            font-size: 0.76rem;
+            letter-spacing: 0.2em;
             text-transform: uppercase;
-            font-weight: 300;
         }
 
         .info-value {
-            font-size: 1.1rem;
-            color: rgba(255,255,255,0.9);
+            color: rgba(255, 255, 255, 0.84);
             font-weight: 300;
-            line-height: 1.8;
         }
 
-        /* お問い合わせ */
         .contact {
-            background: 
-                repeating-linear-gradient(
-                    45deg,
-                    rgba(0,0,0,0.02) 0px,
-                    transparent 2px,
-                    transparent 4px,
-                    rgba(0,0,0,0.02) 6px
-                ),
-                linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
-            color: white;
             text-align: center;
-            padding: 10rem 4rem;
+            color: #ffffff;
+            background:
+                linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+                #0c0c0b;
+            background-size: 80px 80px;
+        }
+
+        .contact .section-title,
+        .contact .section-subtitle {
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .contact .section-title {
-            color: #d4af37;
+            color: #ffffff;
         }
 
         .contact .section-subtitle {
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.68);
         }
 
-        .contact-button {
-            display: inline-block;
-            padding: 1.5rem 4rem;
-            background: transparent;
-            color: #d4af37;
-            text-decoration: none;
-            border: 2px solid #d4af37;
-            font-weight: 400;
-            font-size: 1.05rem;
-            letter-spacing: 3px;
-            transition: all 0.4s ease;
-            margin-top: 3rem;
-            position: relative;
-            overflow: hidden;
+        .contact-actions {
+            margin-top: 3.2rem;
         }
 
-        .contact-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: #d4af37;
-            transition: left 0.4s ease;
-            z-index: -1;
-        }
-
-        .contact-button:hover::before {
-            left: 0;
-        }
-
-        .contact-button:hover {
-            color: #1a1a1a;
-            transform: translateY(-3px);
-            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
-        }
-
-        /* フッター */
         footer {
-            background: #0a0a0a;
-            color: rgba(255,255,255,0.4);
-            padding: 3rem 4rem;
-            text-align: center;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
+            background: #080807;
+            color: rgba(255, 255, 255, 0.46);
+            padding: 2.2rem 3.5rem;
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
         }
 
-        /* レスポンシブ */
-        @media (max-width: 768px) {
+        .footer-inner {
+            max-width: 1320px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        @media (max-width: 1040px) {
+            nav {
+                padding: 1rem 2rem;
+            }
+
+            .hero-content,
+            .features-layout,
+            .approach-band {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content,
+            .signal-strip {
+                width: min(100% - 4rem, 980px);
+            }
+
+            .hero-mark {
+                min-height: 360px;
+            }
+
             .hero-logo {
-                width: 250px;
-                height: 250px;
+                width: min(58vw, 330px);
             }
 
-            .hero p {
-                font-size: 1.2rem;
+            .hero-mark::before {
+                width: min(62vw, 360px);
             }
 
-            .logo-image {
-                height: 40px;
+            .hero-mark::after {
+                width: min(54vw, 310px);
             }
 
+            .signal-strip,
             .services-grid,
-            .features-grid,
+            .principles,
             .info-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
 
+            .signal,
+            .signal:last-child {
+                border-right: none;
+                border-bottom: 1px solid rgba(226, 199, 130, 0.16);
+            }
+
+            .signal:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 760px) {
             .nav-links {
                 display: none;
             }
 
-            nav {
-                padding: 1.5rem 2rem;
+            .logo-image {
+                height: 36px;
             }
 
-            section, .services, .features, .company-info, .contact {
-                padding: 6rem 2rem;
+            .hero {
+                min-height: auto;
+            }
+
+            .hero::after {
+                inset: 5.8rem 1rem 3rem;
+            }
+
+            .hero-content {
+                width: calc(100% - 2rem);
+                gap: 0.5rem;
+                padding-top: 6rem;
+                padding-bottom: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(3.05rem, 15vw, 4.35rem);
+            }
+
+            .hero-copy {
+                font-size: 1rem;
+            }
+
+            .hero-actions,
+            .footer-inner {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .button {
+                width: 100%;
+                padding: 0 1.1rem;
+            }
+
+            .hero-mark {
+                min-height: 220px;
+                overflow: hidden;
+            }
+
+            .hero-logo {
+                width: min(66vw, 250px);
+            }
+
+            .hero-mark::before {
+                width: min(72vw, 285px);
+            }
+
+            .hero-mark::after {
+                width: min(62vw, 245px);
+            }
+
+            .signal-strip {
+                position: relative;
+                width: calc(100% - 2rem);
+                margin: 0 auto;
+                left: auto;
+                bottom: auto;
+                transform: none;
+            }
+
+            section {
+                padding: 5.8rem 1.25rem;
             }
 
             .section-title {
-                font-size: 2.5rem;
+                font-size: clamp(2.35rem, 12vw, 3.45rem);
+            }
+
+            .services-grid {
+                margin-top: 3.2rem;
+            }
+
+            .service-card {
+                min-height: auto;
+                padding: 2.1rem;
             }
 
             .feature-image {
-                height: 400px;
+                min-height: 360px;
             }
 
-            .feature-image img {
-                max-width: 250px;
-                max-height: 250px;
+            .feature-list li,
+            .info-item {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .approach-band {
+                padding: 4.8rem 0;
+            }
+
+            footer {
+                padding: 2rem 1.25rem;
             }
         }
     </style>
@@ -677,213 +804,245 @@
 <body>
     <header>
         <nav>
-            <div class="logo-container">
+            <a href="#top" aria-label="Art&Soul top">
                 <img src="./Art-Soul-09.png" alt="Art&amp;Soul" class="logo-image">
-            </div>
+            </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#features">Features</a></li>
+                <li><a href="#features">Advantage</a></li>
+                <li><a href="#approach">Approach</a></li>
                 <li><a href="#company">Company</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-logo">
-                <img src="./Art-Soul-04.png" alt="Art&amp;Soul">
-            </div>
-            <div class="hero-divider"></div>
-            <p>AIで未来を創造する</p>
-            <p class="hero-subtitle">Executive AI Consulting Partner</p>
-            <a href="#contact" class="cta-button">無料相談</a>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Services</h2>
-            <p class="section-subtitle">経営層向けのAI導入支援から実装まで、包括的なソリューションを提供</p>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">◆</div>
-                    <h3>AI戦略コンサルティング</h3>
-                    <p>経営層向けのAI戦略立案から組織変革まで、ビジネス成果にコミットしたコンサルティングを提供します。</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">◆</div>
-                    <h3>ノーコードAI開発</h3>
-                    <p>Claude、ChatGPT、Notebook LMなどの最先端AIツールを活用し、プログラミング不要でAIソリューションを実現します。</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">◆</div>
-                    <h3>エグゼクティブ研修</h3>
-                    <p>経営幹部向けのAI活用トレーニングプログラムを提供。実践的なスキル習得を支援します。</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">◆</div>
-                    <h3>DX推進支援</h3>
-                    <p>AI技術を中心としたデジタルトランスフォーメーションを推進し、企業の競争力強化をサポートします。</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">◆</div>
-                    <h3>カスタムAIソリューション</h3>
-                    <p>業界特化型のAIアプリケーション開発から、既存システムとのAI統合まで幅広く対応します。</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">◆</div>
-                    <h3>イノベーション支援</h3>
-                    <p>AI技術を活用した新規事業開発、プロダクト企画、特許戦略立案をサポートします。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features" class="features">
-        <div class="container">
-            <div class="features-grid">
-                <div class="feature-image">
-                    <img src="./Art-Soul-04.png" alt="Art&amp;Soul">
-                </div>
-
+    <main id="top">
+        <section class="hero" aria-label="Art&Soul executive AI consulting">
+            <div class="hero-content">
                 <div>
-                    <h2 class="section-title">Features</h2>
-                    <p class="section-subtitle">技術と創造性を融合したアプローチ</p>
-
-                    <ul class="feature-list">
-                        <li>
-                            <strong>経営視点のコンサルティング</strong>
-                            ビジネス成果を最優先に、経営層と同じ目線でAI戦略を構築
-                        </li>
-
-                        <li>
-                            <strong>最新AI技術の実践活用</strong>
-                            Claude、GPT-4、Geminiなど最先端のAIモデルを業務に即導入
-                        </li>
-
-                        <li>
-                            <strong>ノーコード開発の専門性</strong>
-                            プログラミング不要で、迅速かつ柔軟なAIソリューション実装
-                        </li>
-
-                        <li>
-                            <strong>実績豊富なトレーニング</strong>
-                            大手企業のエグゼクティブ層向けAI研修プログラムの設計・実施経験
-                        </li>
-
-                        <li>
-                            <strong>包括的なサポート</strong>
-                            戦略立案から実装、運用まで一気通貫でサポート
-                        </li>
-                    </ul>
+                    <div class="eyebrow">Executive AI Consulting</div>
+                    <h1>Art&amp;Soul</h1>
+                    <p class="hero-copy">
+                        経営判断、組織変革、実装現場をひとつの戦略線で結ぶ。Art&amp;Soulは、生成AIを企業価値へ変換するためのエグゼクティブ・パートナーです。
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="button">Private Consultation</a>
+                        <a href="#services" class="button secondary">View Services</a>
+                    </div>
+                </div>
+                <div class="hero-mark" aria-hidden="true">
+                    <img src="./Art-Soul-04.png" alt="" class="hero-logo">
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="company" class="company-info">
-        <div class="container">
-            <h2 class="section-title">Company</h2>
-            <p class="section-subtitle">Corporate Information</p>
+            <div class="signal-strip" aria-label="consulting highlights">
+                <div class="signal">
+                    <strong>Strategy</strong>
+                    <span>Executive agenda design</span>
+                </div>
+                <div class="signal">
+                    <strong>AI Build</strong>
+                    <span>No-code to custom systems</span>
+                </div>
+                <div class="signal">
+                    <strong>Adoption</strong>
+                    <span>Leadership enablement</span>
+                </div>
+            </div>
+        </section>
 
-            <div class="info-grid">
-                <div>
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-kicker">Services</div>
+                <h2 class="section-title">AIを、経営の意思決定システムへ。</h2>
+                <p class="section-subtitle">
+                    トップマネジメントの論点整理から、業務実装、研修、運用定着まで。高い機密性と実行速度が求められるAI変革を、少数精鋭の体制で支援します。
+                </p>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-index">01</div>
+                        <h3>AI戦略コンサルティング</h3>
+                        <p>経営課題、競争優位、投資対効果を整理し、AI導入の優先順位とロードマップを設計します。</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-index">02</div>
+                        <h3>ノーコードAI開発</h3>
+                        <p>Claude、ChatGPT、Notebook LMなどを活用し、短期間で検証可能な業務AIソリューションを構築します。</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-index">03</div>
+                        <h3>エグゼクティブ研修</h3>
+                        <p>経営幹部がAIを判断材料として扱うための、実践型プログラムと意思決定フレームを提供します。</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-index">04</div>
+                        <h3>DX推進支援</h3>
+                        <p>既存業務の再設計、データ活用、部門横断の推進体制づくりを伴走型で支援します。</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-index">05</div>
+                        <h3>カスタムAIソリューション</h3>
+                        <p>業界特化のAIアプリケーション、社内ナレッジ活用、既存システム連携まで幅広く対応します。</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-index">06</div>
+                        <h3>イノベーション支援</h3>
+                        <p>新規事業、プロダクト企画、AI活用テーマの探索から事業化の論点設計まで支援します。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="features-layout">
+                    <div class="feature-image">
+                        <img src="./Art-Soul-04.png" alt="Art&amp;Soul">
+                    </div>
+
+                    <div>
+                        <div class="section-kicker">Advantage</div>
+                        <h2 class="section-title">構想で終わらせない、実装に強いAIパートナー。</h2>
+                        <p class="section-subtitle">
+                            コンサルティングの上流設計と、現場で動くAI活用のディテールを同時に扱うことで、導入後の成果に焦点を合わせます。
+                        </p>
+
+                        <ul class="feature-list">
+                            <li>
+                                <span>01</span>
+                                <div>
+                                    <strong>経営視点のコンサルティング</strong>
+                                    事業インパクト、組織能力、実行リスクを同じテーブルで評価し、経営判断に耐えるAI戦略を構築します。
+                                </div>
+                            </li>
+                            <li>
+                                <span>02</span>
+                                <div>
+                                    <strong>最新AI技術の実践活用</strong>
+                                    Claude、GPT、Geminiなどの生成AIを、業務プロセスと意思決定フローへ具体的に接続します。
+                                </div>
+                            </li>
+                            <li>
+                                <span>03</span>
+                                <div>
+                                    <strong>ノーコード開発の専門性</strong>
+                                    スピードを重視したプロトタイプから、運用に耐える仕組み化まで段階的に設計します。
+                                </div>
+                            </li>
+                            <li>
+                                <span>04</span>
+                                <div>
+                                    <strong>エグゼクティブ層への浸透</strong>
+                                    経営幹部がAIを自ら使い、判断し、組織へ展開できる状態をつくります。
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="approach" class="approach">
+            <div class="container">
+                <div class="approach-band">
+                    <div>
+                        <div class="section-kicker">Approach</div>
+                        <h2 class="section-title">少数精鋭で、静かに深く変革する。</h2>
+                    </div>
+                    <p class="approach-text">
+                        AI導入の成否は、ツール選定だけでは決まりません。経営課題の解像度、現場での使いやすさ、情報管理、そして継続的に改善できる運用設計が必要です。Art&amp;Soulは、構想、検証、実装、定着を分断せず、企業ごとの文脈に合わせて最短距離を設計します。
+                    </p>
+                </div>
+
+                <div class="principles">
+                    <div class="principle">
+                        <span>01</span>
+                        <h3>Executive Alignment</h3>
+                        <p>経営層の意思決定に必要な論点を先に揃え、AI活用の目的を明確化します。</p>
+                    </div>
+                    <div class="principle">
+                        <span>02</span>
+                        <h3>Rapid Prototyping</h3>
+                        <p>使える形で早く検証し、抽象論ではなく実際の業務変化から判断します。</p>
+                    </div>
+                    <div class="principle">
+                        <span>03</span>
+                        <h3>Operational Discipline</h3>
+                        <p>セキュリティ、教育、改善サイクルまで含め、導入後の運用品質を設計します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="company" class="company-info">
+            <div class="container">
+                <div class="section-kicker">Company</div>
+                <h2 class="section-title">Corporate Information</h2>
+                <p class="section-subtitle">Art&amp;Soul株式会社は、AIコンサルティングとエグゼクティブ向けAI活用支援を行う企業です。</p>
+
+                <div class="info-grid">
                     <div class="info-item">
                         <div class="info-label">Company Name</div>
                         <div class="info-value">Art&amp;Soul株式会社</div>
                     </div>
-
                     <div class="info-item">
                         <div class="info-label">Established</div>
                         <div class="info-value">2020年1月14日</div>
                     </div>
-
                     <div class="info-item">
                         <div class="info-label">Capital</div>
                         <div class="info-value">1,000,000円</div>
                     </div>
-
                     <div class="info-item">
                         <div class="info-label">CEO</div>
                         <div class="info-value">小西 弘高</div>
                     </div>
-                </div>
-
-                <div>
                     <div class="info-item">
                         <div class="info-label">Head Office</div>
-                        <div class="info-value">
-                            〒131-0032<br>
-                            東京都墨田区立川二丁目10番10号
-                        </div>
+                        <div class="info-value">〒131-0032<br>東京都墨田区立川二丁目10番10号</div>
                     </div>
-
                     <div class="info-item">
                         <div class="info-label">Business</div>
-                        <div class="info-value">
-                            AIコンサルティング<br>
-                            エグゼクティブ向けAI研修<br>
-                            ノーコードAI開発<br>
-                            DX推進支援
-                        </div>
+                        <div class="info-value">AIコンサルティング<br>エグゼクティブ向けAI研修<br>ノーコードAI開発<br>DX推進支援</div>
                     </div>
-
                     <div class="info-item">
                         <div class="info-label">Corporate Number</div>
                         <div class="info-value">0106-01-056732</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <p class="section-subtitle">AIコンサルティングに関するご相談は、お気軽にお問い合わせください</p>
-            <a href="mailto:info@art-soul.co.jp" class="contact-button">お問い合わせ</a>
-        </div>
-    </section>
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-kicker">Contact</div>
+                <h2 class="section-title">AI変革の論点を、経営の言葉で整理する。</h2>
+                <p class="section-subtitle">AI戦略、役員研修、ノーコードAI開発、DX推進に関するご相談を承ります。</p>
+                <div class="contact-actions">
+                    <a href="mailto:info@art-soul.co.jp" class="button">Request Consultation</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <div class="container">
+        <div class="footer-inner">
             <p>&copy; 2026 Art&amp;Soul株式会社. All rights reserved.</p>
+            <p>Executive AI Consulting Partner</p>
         </div>
     </footer>
 
     <script>
-        // スムーススクロール
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // スクロール時のヘッダー効果
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.pageYOffset > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+        window.addEventListener("scroll", () => {
+            const header = document.querySelector("header");
+            header.classList.toggle("scrolled", window.pageYOffset > 80);
         });
     </script>
 </body>
