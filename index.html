@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Art&Soul株式会社は、経営戦略と生成AI実装を接続するエグゼクティブAIコンサルティングファームです。">
+    <meta name="description" content="Art&amp;Soul株式会社は、経営戦略と生成AI実装を接続するエグゼクティブAIコンサルティングファームです。">
     <title>Art&amp;Soul株式会社 | Executive AI Consulting</title>
     <style>
         :root {
@@ -557,6 +557,57 @@
             font-weight: 300;
         }
 
+        .meeting-base {
+            position: relative;
+            min-height: 680px;
+            display: grid;
+            align-items: end;
+            color: #ffffff;
+            isolation: isolate;
+            overflow: hidden;
+            background: #11130f;
+        }
+
+        .meeting-base::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            background: url("./takanawa/assets/photo-01.webp") center 42% / cover no-repeat;
+            transform: scale(1.015);
+        }
+
+        .meeting-base::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(90deg, rgba(7, 9, 7, 0.94) 0%, rgba(7, 9, 7, 0.73) 47%, rgba(7, 9, 7, 0.25) 100%),
+                        linear-gradient(0deg, rgba(7, 9, 7, 0.78), transparent 50%);
+        }
+
+        .meeting-base-content {
+            max-width: 760px;
+            padding-bottom: 1rem;
+        }
+
+        .meeting-base .section-title {
+            color: #ffffff;
+            max-width: 760px;
+        }
+
+        .meeting-base .section-subtitle {
+            color: rgba(255, 255, 255, 0.76);
+            max-width: 680px;
+        }
+
+        .meeting-base-meta {
+            margin-top: 1.5rem;
+            color: var(--gold-bright);
+            font-size: 0.76rem;
+            letter-spacing: 0.18em;
+        }
+
         .company-info {
             color: #ffffff;
             background:
@@ -804,13 +855,14 @@
 <body>
     <header>
         <nav>
-            <a href="#top" aria-label="Art&Soul top">
+            <a href="#top" aria-label="Art&amp;Soul top">
                 <img src="./Art-Soul-09.png" alt="Art&amp;Soul" class="logo-image">
             </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#features">Advantage</a></li>
                 <li><a href="#approach">Approach</a></li>
+                <li><a href="./takanawa/">Takanawa</a></li>
                 <li><a href="#company">Company</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -818,7 +870,7 @@
     </header>
 
     <main id="top">
-        <section class="hero" aria-label="Art&Soul executive AI consulting">
+        <section class="hero" aria-label="Art&amp;Soul executive AI consulting">
             <div class="hero-content">
                 <div>
                     <div class="eyebrow">Executive AI Consulting</div>
@@ -976,6 +1028,23 @@
                         <span>03</span>
                         <h3>Operational Discipline</h3>
                         <p>セキュリティ、教育、改善サイクルまで含め、導入後の運用品質を設計します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="meeting-base" aria-labelledby="meeting-base-title">
+            <div class="container">
+                <div class="meeting-base-content">
+                    <div class="section-kicker">Takanawa Meeting Base</div>
+                    <h2 id="meeting-base-title" class="section-title">対話の内容に合わせて、場所を選ぶ。</h2>
+                    <p class="section-subtitle">
+                        Art&amp;Soulは、高輪ゲートウェイシティを完全予約制の面談拠点として活用しています。森の階、ホテルラウンジ、本の中の会議室。結論を急がない対話のために、相手とテーマに合う場所をご案内します。
+                    </p>
+                    <p class="meeting-base-meta">JR高輪ゲートウェイ駅 直結 ／ 完全予約制</p>
+                    <div class="hero-actions">
+                        <a href="./takanawa/" class="button">高輪拠点を見る</a>
+                        <a href="mailto:info@art-soul.co.jp?subject=%E9%AB%98%E8%BC%AA%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%BB%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87" class="button secondary">面談を予約する</a>
                     </div>
                 </div>
             </div>
