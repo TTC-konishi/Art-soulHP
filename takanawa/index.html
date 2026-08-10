@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Art&amp;Soul 高輪ゲートウェイ・ミーティングベース</title>
+<meta name="description" content="Art&amp;Soulが完全予約制の面談拠点として活用する、高輪ゲートウェイ・ミーティングベースのご案内。">
+<link rel="canonical" href="https://art-soul.co.jp/takanawa/">
+<link rel="preload" as="image" href="./assets/photo-01.webp" type="image/webp">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="Art&amp;Soul株式会社">
+<meta property="og:title" content="Art&amp;Soul 高輪ゲートウェイ・ミーティングベース">
+<meta property="og:description" content="対話の内容に合わせて、場所を選ぶ。完全予約制の面談拠点をご案内します。">
+<meta property="og:url" content="https://art-soul.co.jp/takanawa/">
+<meta property="og:image" content="https://art-soul.co.jp/takanawa/assets/photo-01.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0c0e0d">
+<meta name="format-detection" content="telephone=no">
+<script>document.documentElement.className='js';</script>
+<noscript><style>.js .rv{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+:root{
+  --bg:#0c0e0d; --bg2:#131614; --bg3:#1a1e1b;
+  --ink:#eeebe4; --ink2:#b9bdb6; --ink3:#878d84;
+  --line:rgba(238,235,228,.14);
+  --moss:#8aa87c; --gold:#c4ab7e;
+  --mincho:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+  --gothic:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:var(--gothic); font-size:16px; line-height:1.95;
+  font-feature-settings:"palt"1; letter-spacing:.03em;
+  overflow-x:hidden;
+}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed; inset:0 0 auto 0; z-index:50;
+  display:flex; align-items:center; gap:28px;
+  padding:14px clamp(18px,4vw,48px);
+  background:linear-gradient(rgba(6,8,7,.75),rgba(6,8,7,0));
+  transition:background .5s, border-color .5s;
+  border-bottom:1px solid transparent;
+}
+.nav.on{background:rgba(12,14,13,.9);
+  -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px);
+  border-bottom-color:var(--line)}
+.nav .mark{font-family:var(--mincho);font-size:13px;letter-spacing:.32em;white-space:nowrap}
+.nav .mark b{font-weight:400;color:var(--moss)}
+.nav .mark{text-decoration:none;border:0}
+.nav ul{display:flex;gap:22px;list-style:none;margin-left:auto;font-size:11.5px;letter-spacing:.18em;color:var(--ink2)}
+.nav a{text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:.3s}
+.nav a:hover{color:var(--ink);border-bottom-color:var(--moss)}
+.nav-cta{margin-left:2px!important;padding:8px 13px!important;border:1px solid rgba(196,171,126,.55)!important;
+  color:var(--ink)!important;letter-spacing:.16em!important;white-space:nowrap;background:rgba(12,14,13,.42)}
+@media(max-width:820px){.nav ul{display:none}.nav{justify-content:space-between}.nav .mark{font-size:11px;letter-spacing:.2em}.nav-cta{display:inline-flex}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:100vh;height:100svh;min-height:560px;display:flex;align-items:flex-end;overflow:hidden}
+.hero .bg{position:absolute;inset:0;animation:slowzoom 26s ease-out forwards}
+@keyframes slowzoom{from{transform:scale(1.1)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(6,8,7,.97) 0%,rgba(6,8,7,.9) 22%,rgba(6,8,7,.6) 46%,rgba(6,8,7,.2) 74%,rgba(6,8,7,.45) 100%)}
+.hero .inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;
+  padding:0 clamp(20px,5vw,40px) clamp(52px,9vh,110px)}
+.eyebrow{font-size:11px;letter-spacing:.42em;color:#a9c39b;margin-bottom:26px;
+  text-shadow:0 1px 14px rgba(0,0,0,.95),0 0 30px rgba(0,0,0,.7);
+  animation:fadeup 1.1s .2s both}
+.hero h1{font-family:var(--mincho);font-weight:400;line-height:1.42;
+  font-size:clamp(30px,6.4vw,64px);letter-spacing:.055em;text-shadow:0 2px 30px rgba(0,0,0,.5);
+  animation:fadeup 1.2s .38s both}
+.hero h1 .g{color:var(--moss)}
+.hero .sub{text-shadow:0 1px 16px rgba(0,0,0,.85);margin-top:26px;max-width:44em;color:var(--ink2);font-size:clamp(13px,1.55vw,15.5px);
+  line-height:2.15;animation:fadeup 1.2s .62s both}
+.hero .who{text-shadow:0 1px 14px rgba(0,0,0,.9);margin-top:34px;padding-top:20px;border-top:1px solid var(--line);
+  font-size:12px;letter-spacing:.24em;color:var(--ink3);animation:fadeup 1.2s .82s both}
+@keyframes fadeup{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.no-js .eyebrow,.no-js .hero h1,.no-js .hero .sub,.no-js .hero .who{animation:none;opacity:1;transform:none}
+.scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;
+  width:1px;height:52px;background:linear-gradient(var(--moss),transparent);opacity:.8}
+
+/* ---------- shared ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+section{position:relative}
+.pad{padding:clamp(72px,11vw,132px) 0}
+.kicker{display:flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.34em;color:var(--moss);margin-bottom:22px}
+.kicker::before{content:"";width:34px;height:1px;background:var(--moss);opacity:.7}
+h2{font-family:var(--mincho);font-weight:400;font-size:clamp(23px,3.5vw,38px);line-height:1.55;letter-spacing:.05em}
+h3{font-family:var(--mincho);font-weight:400;font-size:clamp(18px,2.2vw,23px);line-height:1.65;letter-spacing:.05em}
+p{color:var(--ink2);font-size:15px;line-height:2.15}
+p+p{margin-top:1.15em}
+.lead{font-size:clamp(15px,1.75vw,17px);color:var(--ink);line-height:2.3}
+.hr{height:1px;background:var(--line);border:0}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .js .rv{opacity:1!important;transform:none!important;transition:none!important}
+  .hero .bg{animation:none}
+  .eyebrow,.hero h1,.hero .sub,.hero .who{animation:none!important;opacity:1!important;transform:none!important}
+}
+
+/* ---------- intro ---------- */
+.intro{background:var(--bg)}
+.intro .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,6vw,86px);align-items:center}
+@media(max-width:840px){.intro .grid{grid-template-columns:1fr;gap:38px}}
+.intro figure{aspect-ratio:4/3;overflow:hidden;border-radius:2px}
+.pull{font-family:var(--mincho);font-size:clamp(19px,2.6vw,27px);line-height:1.95;letter-spacing:.05em;
+  color:var(--ink);margin:0 0 28px;padding-left:20px;border-left:2px solid var(--moss)}
+
+/* ---------- facts ---------- */
+.facts{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts .row{display:grid;grid-template-columns:repeat(4,1fr);padding:clamp(34px,5vw,52px) 0}
+@media(max-width:760px){.facts .row{grid-template-columns:repeat(2,1fr);gap:26px 0}}
+.fact{text-align:center;padding:0 12px;position:relative}
+.fact+.fact::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:1px;background:var(--line)}
+@media(max-width:760px){.fact:nth-child(3)::before{display:none}}
+.fact .n{font-family:var(--mincho);font-size:clamp(24px,3.6vw,34px);letter-spacing:.03em;line-height:1.2}
+.fact .n small{font-size:.5em;letter-spacing:.1em;color:var(--ink2);margin-left:.25em}
+.fact .l{margin-top:10px;font-size:10.5px;letter-spacing:.24em;color:var(--ink3)}
+
+/* ---------- chapter ---------- */
+.chap{border-top:1px solid var(--line)}
+.chap .head{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,60px);align-items:start;margin-bottom:clamp(38px,6vw,64px)}
+@media(max-width:700px){.chap .head{grid-template-columns:1fr;gap:16px}}
+.chap .no{font-family:var(--mincho);font-size:clamp(38px,6vw,74px);line-height:.9;color:transparent;
+  -webkit-text-stroke:1px rgba(138,168,124,.55);letter-spacing:.02em}
+.chap .en{font-size:10.5px;letter-spacing:.3em;color:var(--moss);margin-top:14px}
+.chap .desc{margin-top:20px;max-width:40em}
+
+/* photo layouts */
+.big{aspect-ratio:16/9;overflow:hidden;border-radius:2px;margin-bottom:clamp(16px,2.4vw,26px)}
+@media(max-width:640px){.big{aspect-ratio:4/3}}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,22px)}
+.trio{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(12px,2vw,22px);align-items:stretch}
+.trio .main{display:flex;flex-direction:column;min-height:0}
+.trio .main .ph{flex:1 1 auto;aspect-ratio:auto;min-height:220px}
+.trio .stack{display:grid;gap:clamp(12px,2vw,22px)}
+@media(max-width:700px){.duo,.trio{grid-template-columns:1fr}
+  .trio .main .ph{aspect-ratio:4/3;flex:none;min-height:0}}
+.ph{overflow:hidden;border-radius:2px;position:relative;background:var(--bg3)}
+.duo.close .ph{aspect-ratio:5/4}
+.ph.sq{aspect-ratio:1/1}.ph.ls{aspect-ratio:4/3}.ph.pt{aspect-ratio:3/4}.ph.wd{aspect-ratio:16/10}
+.ph img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.ph:hover img{transform:scale(1.045)}
+.cap{margin-top:9px;font-size:10.5px;letter-spacing:.18em;color:var(--ink3)}
+
+/* spec list */
+.spec{margin-top:clamp(30px,4.5vw,48px);display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.spec.four{grid-template-columns:repeat(4,1fr)}
+@media(max-width:760px){.spec{grid-template-columns:1fr}}
+@media(max-width:980px){.spec.four{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.spec.four{grid-template-columns:1fr}}
+.spec div{background:var(--bg);padding:22px 20px}
+.spec dt{font-size:10.5px;letter-spacing:.22em;color:var(--moss);margin-bottom:8px}
+.spec dd{font-size:13.5px;line-height:1.9;color:var(--ink2)}
+
+/* ---------- timeline ---------- */
+.tl{background:var(--bg2);border-top:1px solid var(--line)}
+.tlgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.6vw,30px);margin-top:clamp(34px,5vw,54px)}
+@media(max-width:900px){.tlgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.tlgrid{grid-template-columns:1fr}}
+.tlc{border-top:1px solid var(--moss);padding-top:20px}
+.tlc .t{font-family:var(--mincho);font-size:20px;letter-spacing:.06em;color:var(--gold)}
+.tlc h4{font-family:var(--mincho);font-weight:400;font-size:16.5px;margin:10px 0 10px;letter-spacing:.05em}
+.tlc p{font-size:13.5px;line-height:2}
+
+/* ---------- table ---------- */
+.tbl{width:100%;border-collapse:collapse;margin-top:clamp(26px,4vw,40px);font-size:14px}
+.tbl th,.tbl td{text-align:left;padding:15px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{width:34%;font-weight:400;color:var(--moss);font-size:11.5px;letter-spacing:.2em;white-space:nowrap}
+.tbl td{color:var(--ink2);line-height:1.9}
+@media(max-width:560px){.tbl th,.tbl td{display:block;width:100%;border:0;padding:4px 0}
+  .tbl th{padding-top:16px}.tbl tr{display:block;border-bottom:1px solid var(--line);padding-bottom:14px}}
+
+/* ---------- band ---------- */
+.band{position:relative;height:min(62svh,520px);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.band .bg{position:absolute;inset:0}
+.band::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(120% 90% at 50% 50%,rgba(6,8,7,.62),rgba(6,8,7,.86))}
+.band .t{position:relative;z-index:2;text-align:center;padding:0 24px;
+  font-family:var(--mincho);font-size:clamp(19px,3.4vw,34px);line-height:1.9;letter-spacing:.09em}
+.band .t{text-shadow:0 2px 26px rgba(0,0,0,.7)}
+.band .t small{display:block;margin-top:18px;font-family:var(--gothic);font-size:10.5px;
+  letter-spacing:.32em;color:#a9c39b;text-shadow:0 1px 10px rgba(0,0,0,.9)}
+
+/* ---------- foot ---------- */
+footer{background:#080a09;border-top:1px solid var(--line);padding:clamp(56px,8vw,86px) 0 40px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(28px,5vw,60px)}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr}}
+footer .mark{font-family:var(--mincho);font-size:15px;letter-spacing:.3em;margin-bottom:18px}
+footer .mark b{font-weight:400;color:var(--moss)}
+footer p{font-size:13px;line-height:2.1}
+.fnote{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);
+  font-size:10.5px;line-height:2.1;color:#5f655e;letter-spacing:.06em}
+.booking-note{margin-top:22px;padding:16px 18px;border-left:2px solid var(--gold);background:rgba(196,171,126,.08);
+  color:var(--ink2);font-size:13px;line-height:1.9;max-width:46em}
+.cta{display:inline-flex;align-items:center;justify-content:center;margin-top:24px;min-height:50px;padding:0 24px;
+  border:1px solid var(--gold);background:var(--gold);color:#141611;text-decoration:none;
+  font-size:12px;letter-spacing:.18em;transition:transform .25s,background .25s}
+.cta:hover{transform:translateY(-2px);background:#d2bd95}
+.cta.secondary{margin-left:10px;background:transparent;color:var(--ink);border-color:var(--line)}
+.source-links{margin-top:12px;display:flex;gap:8px 18px;flex-wrap:wrap}
+.source-links a{color:#828a80;text-underline-offset:3px}
+@media(max-width:560px){.cta,.cta.secondary{display:flex;width:100%;margin:18px 0 0}.source-links{display:block}.source-links a{display:block;margin-top:6px}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a class="mark" href="../" aria-label="Art&amp;Soul ホームへ">ART&amp;SOUL<b>&nbsp;／&nbsp;</b>高輪</a>
+  <ul>
+    <li><a href="#why">なぜここか</a></li>
+    <li><a href="#c1">森の階</a></li>
+    <li><a href="#c2">30階の応接</a></li>
+    <li><a href="#c3">本の中の会議室</a></li>
+    <li><a href="#c4">街そのもの</a></li>
+    <li><a href="#access">アクセス</a></li>
+  </ul>
+  <a class="nav-cta" href="mailto:info@art-soul.co.jp?subject=%E9%AB%98%E8%BC%AA%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%BB%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">面談予約</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="bg"><img src="./assets/photo-01.webp" fetchpriority="high" decoding="async" alt="都心上空150mの庭園に置かれた石のテーブル"></div>
+  <div class="inner">
+    <div class="eyebrow">TAKANAWA GATEWAY CITY ／ TOKYO</div>
+    <h1>都心の上空150mに、<br><span class="g">森</span>がある。</h1>
+    <p class="sub">
+      東京駅から8分。羽田から17分。JR山手線の新しい駅の真上に、2026年3月、街がひとつ完成しました。<br>
+      Art&amp;Soulは、この街を完全予約制の面談拠点として選びました。理由は、立地だけではありません。
+    </p>
+    <div class="who">ART&amp;SOUL 高輪ゲートウェイ・ミーティングベース</div>
+  </div>
+  <div class="scroll"></div>
+</header>
+
+<!-- WHY -->
+<section class="intro pad" id="why">
+  <div class="wrap">
+    <div class="kicker rv">WHY HERE</div>
+    <div class="grid">
+      <div class="rv">
+        <p class="pull">どこで会うかは、<br>何を話せるかを決めてしまう。</p>
+        <p class="booking-note"><strong style="color:var(--ink);font-weight:400">完全予約制の面談拠点です。</strong><br>常設の専用受付を備えたオフィスではありません。集合場所は、ご予約確定時に担当者からご案内します。</p>
+        <p>会議室の椅子が硬ければ、話は早く終わります。窓の外に何も見えなければ、話は目の前の数字から離れません。場所は、話の内容を静かに規定します。</p>
+        <p>私たちが扱うのは、多くの場合、その方の人生の時間軸そのものです。10年後、20年後、そのご家族。急いで結論を出す種類の話ではありません。だから、急がなくていい場所が要ると考えました。</p>
+        <p class="lead" style="margin-top:1.6em">高輪ゲートウェイシティを選んだのは、<strong style="color:var(--ink);font-weight:400">「一つの場所」ではなく「選べる複数の場所」</strong>が、駅を出て一続きに揃っているからです。込み入った話は静かな階で、初めましては光の入るラウンジで、資料を広げるなら会議室で。同じ街の中で、話の性質に合わせて場所のほうを変えられる。</p>
+      </div>
+      <figure class="rv"><img loading="lazy" decoding="async" src="./assets/photo-02.webp" alt="THE LINKPILLARのロビー"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- FACTS -->
+<section class="facts">
+  <div class="wrap">
+    <div class="row">
+      <div class="fact rv"><div class="n">8<small>分</small></div><div class="l">東京駅から</div></div>
+      <div class="fact rv"><div class="n">2<small>分</small></div><div class="l">泉岳寺駅まで徒歩</div></div>
+      <div class="fact rv"><div class="n">150<small>m</small></div><div class="l">庭園のある高さ</div></div>
+      <div class="fact rv"><div class="n">8<small>:00–24:00</small></div><div class="l">LUFTBAUM 開放時間</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 1 -->
+<section class="chap pad" id="c1">
+  <div class="wrap">
+    <div class="head">
+      <div class="no rv">01</div>
+      <div class="rv">
+        <div class="en">LUFTBAUM ／ NORTH 28-29F</div>
+        <h2>込み入った話は、<br>森の階でする。</h2>
+        <p class="desc">ニュウマン高輪の最上層、地上約150m。延床約8,000㎡のフロアに、500本を超える植栽が入っています。ガラスの向こうは東京の空、足元は土と石。LUFTBAUMの開放時間は8時から24時ですが、庭園・店舗ごとの利用時間は異なります。</p>
+      </div>
+    </div>
+
+    <div class="big rv"><div class="ph wd" style="aspect-ratio:auto;height:100%"><img loading="lazy" decoding="async" src="./assets/photo-03.webp" alt="LUFTBAUMの水景と樹木"></div></div>
+
+    <div class="trio rv">
+      <div class="main">
+        <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-04.webp" alt="樹に囲まれた石のテーブル席"></div>
+        <div class="cap">樹の下の石のテーブル ／ 半円のベンチが視線を遮る</div>
+      </div>
+      <div class="stack">
+        <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-05.webp" alt="木造の東屋と畳のステージ"></div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-06.webp" alt="庭園に面したレストランエリア"></div>
+      </div>
+    </div>
+
+    <div class="spec rv">
+      <div><dt>使いどころ</dt><dd>結論を急がない相談。相続、事業承継、ご家族の話。声が響かず、隣の席と目が合わない。</dd></div>
+      <div><dt>連れて行きやすさ</dt><dd>駅直結のエレベーターで移動できるパブリックガーデン。初回のお顔合わせでも構えさせずに済みます。</dd></div>
+      <div><dt>時間帯</dt><dd>LUFTBAUMは8:00〜24:00開放。個別の庭園・店舗は時間が異なるため、ご予約時に最新情報を確認します。</dd></div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<section class="band">
+  <div class="bg"><img loading="lazy" decoding="async" src="./assets/photo-07.webp" alt="緑に埋もれたLUFTBAUMのサイン"></div>
+  <div class="t">同じ相手と、同じ話を、<br>違う場所で二度する。<small>THE SECOND CONVERSATION</small></div>
+</section>
+
+<!-- CHAPTER 2 -->
+<section class="chap pad" id="c2">
+  <div class="wrap">
+    <div class="head">
+      <div class="no rv">02</div>
+      <div class="rv">
+        <div class="en">JW MARRIOTT HOTEL TOKYO ／ 30F</div>
+        <h2>30階のラウンジを、<br>応接室として使う。</h2>
+        <p class="desc">2025年10月開業、JWマリオットの首都圏初進出。ロビーとラウンジは最上部の30階にあります。中央に大きな暖炉、そのまわりに一つひとつ独立したソファ席。ホテルの静けさは、こちらが黙っていても場が持つという点で、実務上とても有利です。</p>
+      </div>
+    </div>
+
+    <div class="duo rv">
+      <div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-08.webp" alt="JWマリオット・ホテル東京のロビー"></div>
+        <div class="cap">30階ロビー ／ 天井の照明彫刻</div>
+      </div>
+      <div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-09.webp" alt="暖炉のあるロビーラウンジ"></div>
+        <div class="cap">ラウンジ ／ 席の間隔が広く、声が届かない</div>
+      </div>
+    </div>
+
+    <div class="duo rv" style="margin-top:clamp(12px,2vw,22px)">
+      <div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-10.webp" alt="ラウンジのテーブルに置かれたノートPCとコーヒー"></div>
+        <div class="cap">画面を一枚開くだけで、商談の席になる</div>
+      </div>
+      <div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-11.webp" alt="光る格子壁の廊下"></div>
+        <div class="cap">客室階へ続く廊下 ／ 光の格子壁</div>
+      </div>
+    </div>
+
+    <div class="spec rv four">
+      <div><dt>使いどころ</dt><dd>初対面。ご紹介いただいた方をお迎えするとき。こちらの「格」を説明せずに済ませたい場面。</dd></div>
+      <div><dt>遠方のお客様</dt><dd>成田空港と高輪ゲートウェイ駅・ホテルを結ぶリムジンバスが毎日運行。羽田は泉岳寺駅（徒歩2分）から京急で約15分。宿泊とご面談を同じ建物で完結できます。</dd></div>
+      <div><dt>利用条件</dt><dd>ホテルラウンジの席・営業時間・利用条件に準じます。混雑状況を踏まえ、ご予約時に最適な場所をご案内します。</dd></div>
+      <div><dt>大人数のとき</dt><dd>同じ棟の地下に TAKANAWA GATEWAY Convention Center。約1,640㎡・最大約2,000名のホールまで、駅直結の屋内で完結します。</dd></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 3 -->
+<section class="chap pad" id="c3">
+  <div class="wrap">
+    <div class="head">
+      <div class="no rv">03</div>
+      <div class="rv">
+        <div class="en">BUNKITSU TOKYO ／ NEWoMan TAKANAWA</div>
+        <h2>約10万冊の本の中に、<br>会議室が5つある。</h2>
+        <p class="desc">入場料を払って入る本屋「文喫」の、1,000坪超の旗艦店。ラウンジは223席、コーヒーと煎茶は飲み放題。そして館内に4〜10名用のミーティングルームが5室あり、時間単位で借りられます。書類を広げ、画面を映し、終わったらそのまま本のある席に戻れる。</p>
+      </div>
+    </div>
+
+    <div class="big rv"><div class="ph" style="height:100%"><img loading="lazy" decoding="async" src="./assets/photo-12.webp" alt="文喫東京の書棚"></div></div>
+
+    <div class="trio rv">
+      <div class="main">
+        <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-13.webp" alt="ミーティングルームの内観"></div>
+        <div class="cap">ミーティングルーム ／ モニタ常設</div>
+      </div>
+      <div class="stack">
+        <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-14.webp" alt="窓に面した2〜4名用のブース席"></div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-15.webp" alt="パノラマラウンジの通路"></div>
+      </div>
+    </div>
+
+    <div class="spec rv">
+      <div><dt>ミーティングルーム</dt><dd>5室・4〜10名。1時間あたり1,650円〜3,850円（部屋により変動）。利用中もフリードリンクと館内の本の持ち込み閲覧が可能。</dd></div>
+      <div><dt>入場料</dt><dd>60分1,100円／延長30分550円／1日3,850円（いずれも税込・フリードリンク付）。法人向けプランの設定もあります。</dd></div>
+      <div><dt>使いどころ</dt><dd>設計・比較・記入。手を動かす面談。待ち時間が生まれても、お客様が退屈しない。</dd></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 4 -->
+<section class="chap pad" id="c4">
+  <div class="wrap">
+    <div class="head">
+      <div class="no rv">04</div>
+      <div class="rv">
+        <div class="en">THE CITY ITSELF</div>
+        <h2>拠点は一室ではなく、<br>街の全体です。</h2>
+        <p class="desc">南北約1.3km、昼間人口およそ10万人を想定して設計された街。2025年3月にまちびらき、2026年3月28日にグランドオープンしました。ご面談の前後に使える機能が、すべて屋内でつながっています。</p>
+      </div>
+    </div>
+
+    <div class="duo rv">
+      <div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-16.webp" alt="盆栽を囲むラウンジ席"></div>
+        <div class="cap">館内の待合ラウンジ</div>
+      </div>
+      <div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-17.webp" alt="高輪SAUNASのエントランス"></div>
+        <div class="cap">高輪SAUNAS ／ NEWoMan NORTH 5F</div>
+      </div>
+    </div>
+
+    <div class="spec rv">
+      <div><dt>LiSH ／ NORTH 6-7F</dt><dd>JR東日本の実証実験型ビジネス創造拠点。24時間365日利用可。オープン席約90席、フォンブース、3〜6名のミーティングルーム、ワークショップルーム。</dd></div>
+      <div><dt>高輪SAUNAS ／ NORTH 5F</dt><dd>1,600㎡超、男女あわせて9つのサウナ室。コワーキング、テレカンブース、貸し会議室、仮眠スペースを併設。11:00〜26:00。</dd></div>
+      <div><dt>TAKANAWA GATEWAY Clinics</dt><dd>THE LINKPILLAR 2 の4〜5F。内科・健診・人間ドック・内視鏡から歯科・整形外科まで。外国人の受診にも対応。</dd></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="tl pad">
+  <div class="wrap">
+    <div class="kicker rv">A DAY HERE</div>
+    <h2 class="rv">一日を、この街で組み立てる。</h2>
+    <div class="tlgrid">
+      <div class="tlc rv"><div class="t">08:00</div><h4>森の階で、朝いちばん</h4><p>LUFTBAUMの開放は8時から。朝の静けさを活かし、話の内容に合わせて場所を選びます。</p></div>
+      <div class="tlc rv"><div class="t">11:00</div><h4>本の中で、設計する</h4><p>文喫のミーティングルームへ。資料を広げ、画面を映す。終われば223席のラウンジへ戻れます。</p></div>
+      <div class="tlc rv"><div class="t">15:00</div><h4>30階で、お迎えする</h4><p>ご紹介いただいた方との初対面は、JWマリオットの30階ラウンジ。暖炉のまわりの独立した席で。</p></div>
+      <div class="tlc rv"><div class="t">19:00</div><h4>同じ建物の中で、続きを</h4><p>移動ゼロで食事へ。街を出ずに、話の温度を切らさずに終えられます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD -->
+<section class="chap pad">
+  <div class="wrap">
+    <div class="kicker rv">AFTER THE MEETING</div>
+    <h2 class="rv">最後の30分に、<br>店を探して歩かなくていい。</h2>
+    <p class="lead rv" style="margin-top:22px;max-width:44em">ニュウマン高輪は約200店舗規模、ルミネ史上最大。庭園の階には一軒家のようなレストランが並び、1,000席を超えます。ご面談のあとで店を探すという、いちばん間の悪い時間が発生しません。</p>
+    <div class="duo rv" style="margin-top:clamp(30px,4.5vw,48px)">
+      <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-18.webp" alt="鮨の盛り合わせ"></div>
+      <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-19.webp" alt="生牡蠣とワイン"></div>
+    </div>
+    <div class="duo rv" style="margin-top:clamp(12px,2vw,22px)">
+      <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-20.webp" alt="蕎麦・酒・料理の暖簾"></div>
+      <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-21.webp" alt="ステーキハウスのサイン"></div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND 2 -->
+<section class="band">
+  <div class="bg"><img loading="lazy" decoding="async" src="./assets/photo-22.webp" alt="高輪ゲートウェイ駅前の広場"></div>
+  <div class="t">駅の改札から、傘を差さずに。<small>DIRECTLY CONNECTED</small></div>
+</section>
+
+<!-- ACCESS -->
+<section class="chap pad" id="access">
+  <div class="wrap">
+    <div class="head">
+      <div class="no rv">05</div>
+      <div class="rv">
+        <div class="en">ACCESS</div>
+        <h2>迷いようがない、<br>ということの価値。</h2>
+        <p class="desc">お客様に道順を説明する手間が、ほとんどありません。「高輪ゲートウェイ駅で降りて、改札を出たところで」で終わります。</p>
+      </div>
+    </div>
+
+    <div class="duo rv">
+      <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-23.webp" alt="高輪ゲートウェイ駅と大屋根"></div>
+      <div class="ph ls"><img loading="lazy" decoding="async" src="./assets/photo-24.webp" alt="館内の大理石の通路"></div>
+    </div>
+
+    <table class="tbl rv">
+      <tr><th>最寄駅</th><td>JR高輪ゲートウェイ駅（山手線・京浜東北線）直結</td></tr>
+      <tr><th>東京駅から</th><td>京浜東北・根岸線で約8分</td></tr>
+      <tr><th>渋谷・新宿から</th><td>山手線内回りで約14分／約21分</td></tr>
+      <tr><th>品川駅から</th><td>JRで1駅・約0.9km</td></tr>
+      <tr><th>羽田空港</th><td>泉岳寺駅（徒歩2分）から京急エアポート快特で第3ターミナルまで約15分</td></tr>
+      <tr><th>成田空港</th><td>成田空港〜高輪ゲートウェイ駅／JWマリオット・ホテル東京のリムジンバスが毎日運行</td></tr>
+      <tr><th>他社線</th><td>泉岳寺駅（京急本線・都営浅草線）まで徒歩2分</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="chap pad">
+  <div class="wrap">
+    <div class="duo close" style="align-items:center">
+      <div class="rv">
+        <div class="kicker">INVITATION</div>
+        <h2>まずは、<br>一度ご案内させてください。</h2>
+        <p style="margin-top:22px;max-width:36em">資料でご覧いただくより、実際に上まで上がっていただくほうが早い場所です。ご商談の前でも、後でも、あるいは何の用件がなくても構いません。ご都合のよい時間をお知らせください。</p>
+        <a class="cta" href="mailto:info@art-soul.co.jp?subject=%E9%AB%98%E8%BC%AA%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%BB%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">面談・見学を相談する</a>
+        <a class="cta secondary" href="../">Art&amp;Soul ホームへ</a>
+      </div>
+      <div class="ph ls rv"><img loading="lazy" decoding="async" src="./assets/photo-25.webp" alt="ニュウマン高輪の館内通路"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="mark">ART&amp;SOUL<b>&nbsp;／&nbsp;</b>高輪ゲートウェイ・ミーティングベース</div>
+        <p style="max-width:36em">〒108-0074 東京都港区高輪<br>TAKANAWA GATEWAY CITY／THE LINKPILLAR 1<br>JR高輪ゲートウェイ駅 直結<br>完全予約制・専用受付なし（集合場所は予約確定時にご案内）</p>
+      </div>
+      <div>
+        <p style="color:var(--ink3);font-size:11px;letter-spacing:.22em;margin-bottom:12px">CONTACT</p>
+        <p>ご面談のご予約・拠点のご見学は、メールで承ります。</p>
+        <a class="cta" href="mailto:info@art-soul.co.jp?subject=%E9%AB%98%E8%BC%AA%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%BB%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">info@art-soul.co.jp</a>
+      </div>
+    </div>
+    <div class="fnote">
+      本ページの写真は TAKANAWA GATEWAY CITY にて現地撮影したものです。Art&amp;Soul株式会社は、同施設内の複数の場所を面談内容に応じて活用します。<br>
+      施設情報は各施設の公式発表に基づきます（2026年8月9日確認）。料金・営業時間・サービス内容は変更される場合があります。
+      <span class="source-links">
+        <a href="https://www.takanawagateway-city.com/ja/" target="_blank" rel="noopener">TAKANAWA GATEWAY CITY 公式</a>
+        <a href="https://www.newoman.jp/takanawa/" target="_blank" rel="noopener">ニュウマン高輪 公式</a>
+        <a href="https://www.marriott.com/en-us/hotels/tyojw-jw-marriott-hotel-tokyo/overview/" target="_blank" rel="noopener">JW Marriott Hotel Tokyo 公式</a>
+        <a href="https://bunkitsu.jp/news/79/" target="_blank" rel="noopener">BUNKITSU TOKYO 公式</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  var onScroll=function(){ nav.classList.toggle('on', window.scrollY>60); };
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e,i){ e.style.transitionDelay=(Math.min(i%4,3)*70)+'ms'; io.observe(e); });
+  // 保険：何らかの理由で発火しなかった要素は必ず表示する
+  setTimeout(function(){
+    els.forEach(function(e){
+      if(e.classList.contains('in')) return;
+      var r=e.getBoundingClientRect();
+      if(r.top < window.innerHeight*1.2) e.classList.add('in');
+    });
+  },2200);
+  window.addEventListener('load',function(){
+    setTimeout(function(){
+      var stuck=els.filter(function(e){return !e.classList.contains('in')});
+      if(stuck.length===els.length) els.forEach(function(e){e.classList.add('in')});
+    },1200);
+  });
+})();
+</script>
+</body>
+</html>
