@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Art&amp;Soul Takanawa Gateway Meeting Base</title>
+<meta name="description" content="Discover the Takanawa Gateway meeting base used by Art&amp;Soul for private, appointment-only conversations.">
+<link rel="canonical" href="https://art-soul.co.jp/en/takanawa/">
+<link rel="alternate" hreflang="ja" href="https://art-soul.co.jp/takanawa/">
+<link rel="alternate" hreflang="en" href="https://art-soul.co.jp/en/takanawa/">
+<link rel="alternate" hreflang="x-default" href="https://art-soul.co.jp/takanawa/">
+<link rel="preload" as="image" href="../../takanawa/assets/photo-01.webp" type="image/webp">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Art&amp;Soul Co., Ltd.">
+<meta property="og:title" content="Art&amp;Soul Takanawa Gateway Meeting Base">
+<meta property="og:description" content="Choose the setting to fit the conversation. Discover our appointment-only meeting base.">
+<meta property="og:url" content="https://art-soul.co.jp/en/takanawa/">
+<meta property="og:image" content="https://art-soul.co.jp/takanawa/assets/photo-01.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0c0e0d">
+<meta name="format-detection" content="telephone=no">
+<script>document.documentElement.className='js';</script>
+<noscript><style>.js .rv{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+:root{
+  --bg:#0c0e0d; --bg2:#131614; --bg3:#1a1e1b;
+  --ink:#eeebe4; --ink2:#b9bdb6; --ink3:#878d84;
+  --line:rgba(238,235,228,.14);
+  --moss:#8aa87c; --gold:#c4ab7e;
+  --mincho:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+  --gothic:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",sans-serif;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:var(--gothic); font-size:16px; line-height:1.95;
+  font-feature-settings:"palt"1; letter-spacing:.03em;
+  overflow-x:hidden;
+}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit}
+
+/* ---------- nav ---------- */
+.nav{
+  position:fixed; inset:0 0 auto 0; z-index:50;
+  display:flex; align-items:center; gap:28px;
+  padding:14px clamp(18px,4vw,48px);
+  background:linear-gradient(rgba(6,8,7,.75),rgba(6,8,7,0));
+  transition:background .5s, border-color .5s;
+  border-bottom:1px solid transparent;
+}
+.nav.on{background:rgba(12,14,13,.9);
+  -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px);
+  border-bottom-color:var(--line)}
+.nav .mark{font-family:var(--mincho);font-size:13px;letter-spacing:.32em;white-space:nowrap}
+.nav .mark b{font-weight:400;color:var(--moss)}
+.nav .mark{text-decoration:none;border:0}
+.nav ul{display:flex;gap:22px;list-style:none;margin-left:auto;font-size:11.5px;letter-spacing:.18em;color:var(--ink2)}
+.nav a{text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent;transition:.3s}
+.nav a:hover{color:var(--ink);border-bottom-color:var(--moss)}
+.nav-cta{margin-left:2px!important;padding:8px 13px!important;border:1px solid rgba(196,171,126,.55)!important;
+  color:var(--ink)!important;letter-spacing:.16em!important;white-space:nowrap;background:rgba(12,14,13,.42)}
+.lang-switch{padding:7px 10px!important;border:1px solid rgba(138,168,124,.48)!important;color:#a9c39b!important;
+  font-size:10.5px;letter-spacing:.12em!important;white-space:nowrap}
+@media(max-width:820px){.nav ul{display:none}.nav{justify-content:flex-start;gap:10px}.nav .mark{font-size:11px;letter-spacing:.16em;margin-right:auto}.lang-switch,.nav-cta{display:inline-flex}}
+@media(max-width:520px){
+  .nav{padding:12px;gap:8px}
+  .nav .mark{font-size:9px;letter-spacing:.08em}
+  .lang-switch{padding:6px 8px!important;font-size:9px}
+  .nav-cta{padding:7px 8px!important;font-size:9px;letter-spacing:.08em!important}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:100vh;height:100svh;min-height:560px;display:flex;align-items:flex-end;overflow:hidden}
+.hero .bg{position:absolute;inset:0;animation:slowzoom 26s ease-out forwards}
+@keyframes slowzoom{from{transform:scale(1.1)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(6,8,7,.97) 0%,rgba(6,8,7,.9) 22%,rgba(6,8,7,.6) 46%,rgba(6,8,7,.2) 74%,rgba(6,8,7,.45) 100%)}
+.hero .inner{position:relative;z-index:2;width:100%;max-width:var(--maxw);margin:0 auto;
+  padding:0 clamp(20px,5vw,40px) clamp(52px,9vh,110px)}
+.eyebrow{font-size:11px;letter-spacing:.42em;color:#a9c39b;margin-bottom:26px;
+  text-shadow:0 1px 14px rgba(0,0,0,.95),0 0 30px rgba(0,0,0,.7);
+  animation:fadeup 1.1s .2s both}
+.hero h1{font-family:var(--mincho);font-weight:400;line-height:1.42;
+  font-size:clamp(30px,6.4vw,64px);letter-spacing:.055em;text-shadow:0 2px 30px rgba(0,0,0,.5);
+  animation:fadeup 1.2s .38s both}
+.hero h1 .g{color:var(--moss)}
+.hero .sub{text-shadow:0 1px 16px rgba(0,0,0,.85);margin-top:26px;max-width:44em;color:var(--ink2);font-size:clamp(13px,1.55vw,15.5px);
+  line-height:2.15;animation:fadeup 1.2s .62s both}
+.hero .who{text-shadow:0 1px 14px rgba(0,0,0,.9);margin-top:34px;padding-top:20px;border-top:1px solid var(--line);
+  font-size:12px;letter-spacing:.24em;color:var(--ink3);animation:fadeup 1.2s .82s both}
+@keyframes fadeup{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.no-js .eyebrow,.no-js .hero h1,.no-js .hero .sub,.no-js .hero .who{animation:none;opacity:1;transform:none}
+.scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;
+  width:1px;height:52px;background:linear-gradient(var(--moss),transparent);opacity:.8}
+
+/* ---------- shared ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
+section{position:relative}
+.pad{padding:clamp(72px,11vw,132px) 0}
+.kicker{display:flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.34em;color:var(--moss);margin-bottom:22px}
+.kicker::before{content:"";width:34px;height:1px;background:var(--moss);opacity:.7}
+h2{font-family:var(--mincho);font-weight:400;font-size:clamp(23px,3.5vw,38px);line-height:1.55;letter-spacing:.05em}
+h3{font-family:var(--mincho);font-weight:400;font-size:clamp(18px,2.2vw,23px);line-height:1.65;letter-spacing:.05em}
+p{color:var(--ink2);font-size:15px;line-height:2.15}
+p+p{margin-top:1.15em}
+.lead{font-size:clamp(15px,1.75vw,17px);color:var(--ink);line-height:2.3}
+.hr{height:1px;background:var(--line);border:0}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(30px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .js .rv{opacity:1!important;transform:none!important;transition:none!important}
+  .hero .bg{animation:none}
+  .eyebrow,.hero h1,.hero .sub,.hero .who{animation:none!important;opacity:1!important;transform:none!important}
+}
+
+/* ---------- intro ---------- */
+.intro{background:var(--bg)}
+.intro .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,6vw,86px);align-items:center}
+@media(max-width:840px){.intro .grid{grid-template-columns:1fr;gap:38px}}
+.intro figure{aspect-ratio:4/3;overflow:hidden;border-radius:2px}
+.pull{font-family:var(--mincho);font-size:clamp(19px,2.6vw,27px);line-height:1.95;letter-spacing:.05em;
+  color:var(--ink);margin:0 0 28px;padding-left:20px;border-left:2px solid var(--moss)}
+
+/* ---------- facts ---------- */
+.facts{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts .row{display:grid;grid-template-columns:repeat(4,1fr);padding:clamp(34px,5vw,52px) 0}
+@media(max-width:760px){.facts .row{grid-template-columns:repeat(2,1fr);gap:26px 0}}
+.fact{text-align:center;padding:0 12px;position:relative}
+.fact+.fact::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:1px;background:var(--line)}
+@media(max-width:760px){.fact:nth-child(3)::before{display:none}}
+.fact .n{font-family:var(--mincho);font-size:clamp(24px,3.6vw,34px);letter-spacing:.03em;line-height:1.2}
+.fact .n small{font-size:.5em;letter-spacing:.1em;color:var(--ink2);margin-left:.25em}
+.fact .l{margin-top:10px;font-size:10.5px;letter-spacing:.24em;color:var(--ink3)}
+
+/* ---------- chapter ---------- */
+.chap{border-top:1px solid var(--line)}
+.chap .head{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,60px);align-items:start;margin-bottom:clamp(38px,6vw,64px)}
+@media(max-width:700px){.chap .head{grid-template-columns:1fr;gap:16px}}
+.chap .no{font-family:var(--mincho);font-size:clamp(38px,6vw,74px);line-height:.9;color:transparent;
+  -webkit-text-stroke:1px rgba(138,168,124,.55);letter-spacing:.02em}
+.chap .en{font-size:10.5px;letter-spacing:.3em;color:var(--moss);margin-top:14px}
+.chap .desc{margin-top:20px;max-width:40em}
+
+/* photo layouts */
+.big{aspect-ratio:16/9;overflow:hidden;border-radius:2px;margin-bottom:clamp(16px,2.4vw,26px)}
+@media(max-width:640px){.big{aspect-ratio:4/3}}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,22px)}
+.trio{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(12px,2vw,22px);align-items:stretch}
+.trio .main{display:flex;flex-direction:column;min-height:0}
+.trio .main .ph{flex:1 1 auto;aspect-ratio:auto;min-height:220px}
+.trio .stack{display:grid;gap:clamp(12px,2vw,22px)}
+@media(max-width:700px){.duo,.trio{grid-template-columns:1fr}
+  .trio .main .ph{aspect-ratio:4/3;flex:none;min-height:0}}
+.ph{overflow:hidden;border-radius:2px;position:relative;background:var(--bg3)}
+.duo.close .ph{aspect-ratio:5/4}
+.ph.sq{aspect-ratio:1/1}.ph.ls{aspect-ratio:4/3}.ph.pt{aspect-ratio:3/4}.ph.wd{aspect-ratio:16/10}
+.ph img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
+.ph:hover img{transform:scale(1.045)}
+.cap{margin-top:9px;font-size:10.5px;letter-spacing:.18em;color:var(--ink3)}
+
+/* spec list */
+.spec{margin-top:clamp(30px,4.5vw,48px);display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.spec.four{grid-template-columns:repeat(4,1fr)}
+@media(max-width:760px){.spec{grid-template-columns:1fr}}
+@media(max-width:980px){.spec.four{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.spec.four{grid-template-columns:1fr}}
+.spec div{background:var(--bg);padding:22px 20px}
+.spec dt{font-size:10.5px;letter-spacing:.22em;color:var(--moss);margin-bottom:8px}
+.spec dd{font-size:13.5px;line-height:1.9;color:var(--ink2)}
+
+/* ---------- timeline ---------- */
+.tl{background:var(--bg2);border-top:1px solid var(--line)}
+.tlgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2.6vw,30px);margin-top:clamp(34px,5vw,54px)}
+@media(max-width:900px){.tlgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.tlgrid{grid-template-columns:1fr}}
+.tlc{border-top:1px solid var(--moss);padding-top:20px}
+.tlc .t{font-family:var(--mincho);font-size:20px;letter-spacing:.06em;color:var(--gold)}
+.tlc h4{font-family:var(--mincho);font-weight:400;font-size:16.5px;margin:10px 0 10px;letter-spacing:.05em}
+.tlc p{font-size:13.5px;line-height:2}
+
+/* ---------- table ---------- */
+.tbl{width:100%;border-collapse:collapse;margin-top:clamp(26px,4vw,40px);font-size:14px}
+.tbl th,.tbl td{text-align:left;padding:15px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{width:34%;font-weight:400;color:var(--moss);font-size:11.5px;letter-spacing:.2em;white-space:nowrap}
+.tbl td{color:var(--ink2);line-height:1.9}
+@media(max-width:560px){.tbl th,.tbl td{display:block;width:100%;border:0;padding:4px 0}
+  .tbl th{padding-top:16px}.tbl tr{display:block;border-bottom:1px solid var(--line);padding-bottom:14px}}
+
+/* ---------- band ---------- */
+.band{position:relative;height:min(62svh,520px);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.band .bg{position:absolute;inset:0}
+.band::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(120% 90% at 50% 50%,rgba(6,8,7,.62),rgba(6,8,7,.86))}
+.band .t{position:relative;z-index:2;text-align:center;padding:0 24px;
+  font-family:var(--mincho);font-size:clamp(19px,3.4vw,34px);line-height:1.9;letter-spacing:.09em}
+.band .t{text-shadow:0 2px 26px rgba(0,0,0,.7)}
+.band .t small{display:block;margin-top:18px;font-family:var(--gothic);font-size:10.5px;
+  letter-spacing:.32em;color:#a9c39b;text-shadow:0 1px 10px rgba(0,0,0,.9)}
+
+/* ---------- foot ---------- */
+footer{background:#080a09;border-top:1px solid var(--line);padding:clamp(56px,8vw,86px) 0 40px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(28px,5vw,60px)}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr}}
+footer .mark{font-family:var(--mincho);font-size:15px;letter-spacing:.3em;margin-bottom:18px}
+footer .mark b{font-weight:400;color:var(--moss)}
+footer p{font-size:13px;line-height:2.1}
+.fnote{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);
+  font-size:10.5px;line-height:2.1;color:#5f655e;letter-spacing:.06em}
+.booking-note{margin-top:22px;padding:16px 18px;border-left:2px solid var(--gold);background:rgba(196,171,126,.08);
+  color:var(--ink2);font-size:13px;line-height:1.9;max-width:46em}
+.cta{display:inline-flex;align-items:center;justify-content:center;margin-top:24px;min-height:50px;padding:0 24px;
+  border:1px solid var(--gold);background:var(--gold);color:#141611;text-decoration:none;
+  font-size:12px;letter-spacing:.18em;transition:transform .25s,background .25s}
+.cta:hover{transform:translateY(-2px);background:#d2bd95}
+.cta.secondary{margin-left:10px;background:transparent;color:var(--ink);border-color:var(--line)}
+.source-links{margin-top:12px;display:flex;gap:8px 18px;flex-wrap:wrap}
+.source-links a{color:#828a80;text-underline-offset:3px}
+@media(max-width:560px){.cta,.cta.secondary{display:flex;width:100%;margin:18px 0 0}.source-links{display:block}.source-links a{display:block;margin-top:6px}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a class="mark" href="../" aria-label="Art&amp;Soul home">ART&amp;SOUL<b>&nbsp;/&nbsp;</b>TAKANAWA</a>
+  <ul>
+    <li><a href="#why">Why Here</a></li>
+    <li><a href="#c1">Sky Garden</a></li>
+    <li><a href="#c2">30th Floor</a></li>
+    <li><a href="#c3">Library Rooms</a></li>
+    <li><a href="#c4">The City</a></li>
+    <li><a href="#access">Access</a></li>
+  </ul>
+  <a class="lang-switch" href="../../takanawa/" lang="ja" hreflang="ja" aria-label="日本語で表示">日本語</a>
+  <a class="nav-cta" href="mailto:info@art-soul.co.jp?subject=Takanawa%20Meeting%20Request">Book a Meeting</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="bg"><img src="../../takanawa/assets/photo-01.webp" fetchpriority="high" decoding="async" alt="Stone table in a garden 150 meters above central Tokyo"></div>
+  <div class="inner">
+    <div class="eyebrow">TAKANAWA GATEWAY CITY ／ TOKYO</div>
+    <h1>A forest, 150 meters<br>above central Tokyo.</h1>
+    <p class="sub">
+      Eight minutes from Tokyo Station and seventeen from Haneda Airport. In March 2026, a new city was completed directly above the newest station on the JR Yamanote Line.<br>
+      Art&amp;Soul chose this city as an appointment-only meeting base—for reasons that go well beyond location.
+    </p>
+    <div class="who">ART&amp;SOUL TAKANAWA GATEWAY MEETING BASE</div>
+  </div>
+  <div class="scroll"></div>
+</header>
+
+<!-- WHY -->
+<section class="intro pad" id="why">
+  <div class="wrap">
+    <div class="kicker rv">WHY HERE</div>
+    <div class="grid">
+      <div class="rv">
+        <p class="pull">Where we meet shapes<br>what we are able to discuss.</p>
+        <p class="booking-note"><strong style="color:var(--ink);font-weight:400">This meeting base is available by appointment only.</strong><br>It is not a permanent office with a dedicated reception desk. Your host will provide the meeting point when the appointment is confirmed.</p>
+        <p>Hard chairs make meetings end sooner. A window with no view keeps the conversation fixed on the numbers in front of us. A place quietly sets the boundaries of a conversation.</p>
+        <p>Our work often concerns the arc of a person's life: ten years from now, twenty years from now, and the future of a family. These are not conversations to rush. They need a place where no one has to hurry.</p>
+        <p class="lead" style="margin-top:1.6em">We chose Takanawa Gateway City because it offers <strong style="color:var(--ink);font-weight:400">not one fixed venue, but several settings to choose from</strong>, all connected from the station. A quiet floor for a complex discussion, a light-filled lounge for a first meeting, or a private room when documents need to be spread out. Within the same city, the setting can change to fit the conversation.</p>
+      </div>
+      <figure class="rv"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-02.webp" alt="Lobby of THE LINKPILLAR"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- FACTS -->
+<section class="facts">
+  <div class="wrap">
+    <div class="row">
+      <div class="fact rv"><div class="n">8<small>min</small></div><div class="l">From Tokyo Station</div></div>
+      <div class="fact rv"><div class="n">2<small>min</small></div><div class="l">Walk to Sengakuji</div></div>
+      <div class="fact rv"><div class="n">150<small>m</small></div><div class="l">Garden elevation</div></div>
+      <div class="fact rv"><div class="n">8<small>:00–24:00</small></div><div class="l">LUFTBAUM hours</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 1 -->
+<section class="chap pad" id="c1">
+  <div class="wrap">
+    <div class="head">
+      <div class="no rv">01</div>
+      <div class="rv">
+        <div class="en">LUFTBAUM ／ NORTH 28-29F</div>
+        <h2>For complex conversations,<br>meet on the garden floor.</h2>
+        <p class="desc">At the top of NEWoMan Takanawa, about 150 meters above ground, more than 500 plants fill a floor of roughly 8,000 square meters. Tokyo's sky lies beyond the glass; soil and stone are underfoot. LUFTBAUM is open from 8:00 to 24:00, though individual gardens and venues have their own hours.</p>
+      </div>
+    </div>
+
+    <div class="big rv"><div class="ph wd" style="aspect-ratio:auto;height:100%"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-03.webp" alt="Water and trees at LUFTBAUM"></div></div>
+
+    <div class="trio rv">
+      <div class="main">
+        <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-04.webp" alt="Stone table surrounded by trees"></div>
+        <div class="cap">A stone table beneath the trees / Curved seating creates privacy</div>
+      </div>
+      <div class="stack">
+        <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-05.webp" alt="Wooden pavilion and tatami platform"></div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-06.webp" alt="Restaurant area facing the garden"></div>
+      </div>
+    </div>
+
+    <div class="spec rv">
+      <div><dt>Best suited for</dt><dd>Conversations that should not be rushed: succession, business continuity, or family matters. Voices do not carry, and neighboring seats do not face one another.</dd></div>
+      <div><dt>Easy to reach</dt><dd>A public garden reached by elevator directly from the station, relaxed enough even for a first meeting.</dd></div>
+      <div><dt>Hours</dt><dd>LUFTBAUM is open from 8:00 to 24:00. Individual gardens and venues vary, so we confirm the latest information when arranging your visit.</dd></div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND -->
+<section class="band">
+  <div class="bg"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-07.webp" alt="LUFTBAUM sign surrounded by greenery"></div>
+  <div class="t">The same people, the same subject—<br>a different place, a different conversation.<small>THE SECOND CONVERSATION</small></div>
+</section>
+
+<!-- CHAPTER 2 -->
+<section class="chap pad" id="c2">
+  <div class="wrap">
+    <div class="head">
+      <div class="no rv">02</div>
+      <div class="rv">
+        <div class="en">JW MARRIOTT HOTEL TOKYO ／ 30F</div>
+        <h2>A 30th-floor lounge<br>as a private reception room.</h2>
+        <p class="desc">Opened in October 2025, JW Marriott Hotel Tokyo is the brand's first property in the Tokyo metropolitan area. Its lobby and lounge occupy the top floor. A large central fireplace is surrounded by individually arranged sofas. The quiet of a hotel is practical: the space remains composed even when the conversation pauses.</p>
+      </div>
+    </div>
+
+    <div class="duo rv">
+      <div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-08.webp" alt="Lobby of JW Marriott Hotel Tokyo"></div>
+        <div class="cap">30th-floor lobby / Sculptural ceiling lights</div>
+      </div>
+      <div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-09.webp" alt="Lobby lounge with a fireplace"></div>
+        <div class="cap">Lounge / Generous spacing keeps conversations private</div>
+      </div>
+    </div>
+
+    <div class="duo rv" style="margin-top:clamp(12px,2vw,22px)">
+      <div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-10.webp" alt="Laptop and coffee on a lounge table"></div>
+        <div class="cap">Open one screen and the table becomes a working meeting space</div>
+      </div>
+      <div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-11.webp" alt="Corridor with an illuminated lattice wall"></div>
+        <div class="cap">Corridor to the guest floors / An illuminated lattice wall</div>
+      </div>
+    </div>
+
+    <div class="spec rv four">
+      <div><dt>Best suited for</dt><dd>First meetings and welcoming a referred guest—moments when the setting should convey quality without an explanation.</dd></div>
+      <div><dt>For visiting clients</dt><dd>Daily limousine buses connect Narita Airport with Takanawa Gateway Station and the hotel. Haneda is about 15 minutes by Keikyu from Sengakuji Station, a two-minute walk away. Accommodation and meetings can be completed in the same building.</dd></div>
+      <div><dt>Conditions</dt><dd>Seating, hours, and use are subject to hotel lounge policies. We recommend the best setting at the time of booking, taking current occupancy into account.</dd></div>
+      <div><dt>For larger groups</dt><dd>The TAKANAWA GATEWAY Convention Center is located below the same building, including a roughly 1,640-square-meter hall for up to about 2,000 people—all indoors and directly connected to the station.</dd></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 3 -->
+<section class="chap pad" id="c3">
+  <div class="wrap">
+    <div class="head">
+      <div class="no rv">03</div>
+      <div class="rv">
+        <div class="en">BUNKITSU TOKYO ／ NEWoMan TAKANAWA</div>
+        <h2>Five meeting rooms<br>among nearly 100,000 books.</h2>
+        <p class="desc">BUNKITSU is a bookstore with paid admission, and this flagship spans more than 3,300 square meters. Its lounge has 223 seats, with coffee and green tea included. Five meeting rooms for four to ten people can be rented by the hour. Spread out documents, share a screen, then return to a seat among the books.</p>
+      </div>
+    </div>
+
+    <div class="big rv"><div class="ph" style="height:100%"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-12.webp" alt="Bookshelves at BUNKITSU TOKYO"></div></div>
+
+    <div class="trio rv">
+      <div class="main">
+        <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-13.webp" alt="Interior of a meeting room"></div>
+        <div class="cap">Meeting room / Monitor provided</div>
+      </div>
+      <div class="stack">
+        <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-14.webp" alt="Window-side booth for two to four people"></div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-15.webp" alt="Walkway through the panoramic lounge"></div>
+      </div>
+    </div>
+
+    <div class="spec rv">
+      <div><dt>Meeting rooms</dt><dd>Five rooms for four to ten people. JPY 1,650–3,850 per hour depending on the room. Complimentary drinks and books from the collection remain available during use.</dd></div>
+      <div><dt>Admission</dt><dd>JPY 1,100 for 60 minutes, JPY 550 per additional 30 minutes, or JPY 3,850 for the day. Prices include tax and complimentary drinks. Corporate plans are also available.</dd></div>
+      <div><dt>Best suited for</dt><dd>Designing, comparing, and completing documents—meetings where people need to work with their hands. Even when waiting is unavoidable, guests have no shortage of things to explore.</dd></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPTER 4 -->
+<section class="chap pad" id="c4">
+  <div class="wrap">
+    <div class="head">
+      <div class="no rv">04</div>
+      <div class="rv">
+        <div class="en">THE CITY ITSELF</div>
+        <h2>The meeting base is not one room.<br>It is the entire city.</h2>
+        <p class="desc">Stretching roughly 1.3 kilometers north to south, the district was designed for a daytime population of about 100,000. It opened in phases from March 2025 and celebrated its grand opening on March 28, 2026. Everything useful before and after a meeting is connected indoors.</p>
+      </div>
+    </div>
+
+    <div class="duo rv">
+      <div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-16.webp" alt="Lounge seating around a bonsai display"></div>
+        <div class="cap">An indoor waiting lounge</div>
+      </div>
+      <div>
+        <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-17.webp" alt="Entrance to Takanawa SAUNAS"></div>
+        <div class="cap">Takanawa SAUNAS / NEWoMan NORTH 5F</div>
+      </div>
+    </div>
+
+    <div class="spec rv">
+      <div><dt>LiSH / NORTH 6–7F</dt><dd>JR East's experimental business-creation hub, available 24/7. It includes about 90 open seats, phone booths, meeting rooms for three to six people, and workshop rooms.</dd></div>
+      <div><dt>Takanawa SAUNAS / NORTH 5F</dt><dd>More than 1,600 square meters with nine sauna rooms across the men's and women's areas, plus coworking, teleconference booths, rental meeting rooms, and nap spaces. Open 11:00–26:00.</dd></div>
+      <div><dt>TAKANAWA GATEWAY Clinics</dt><dd>Located on floors 4–5 of THE LINKPILLAR 2, with internal medicine, health screening, comprehensive checkups, endoscopy, dentistry, and orthopedics. International patients are supported.</dd></div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="tl pad">
+  <div class="wrap">
+    <div class="kicker rv">A DAY HERE</div>
+    <h2 class="rv">Design the day around this city.</h2>
+    <div class="tlgrid">
+      <div class="tlc rv"><div class="t">08:00</div><h4>Start in the sky garden</h4><p>LUFTBAUM opens at 8:00. Use the morning quiet and choose a setting that fits the subject.</p></div>
+      <div class="tlc rv"><div class="t">11:00</div><h4>Design among the books</h4><p>Move to a BUNKITSU meeting room. Spread out documents and share a screen, then return to the 223-seat lounge.</p></div>
+      <div class="tlc rv"><div class="t">15:00</div><h4>Welcome a guest on the 30th floor</h4><p>For a first meeting with someone introduced to you, meet at one of the independent seats around the fireplace in the JW Marriott lounge.</p></div>
+      <div class="tlc rv"><div class="t">19:00</div><h4>Continue in the same building</h4><p>Move to dinner without going outdoors, preserving the tone of the conversation through the end of the day.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD -->
+<section class="chap pad">
+  <div class="wrap">
+    <div class="kicker rv">AFTER THE MEETING</div>
+    <h2 class="rv">No need to spend the final thirty minutes<br>searching for a restaurant.</h2>
+    <p class="lead rv" style="margin-top:22px;max-width:44em">With roughly 200 stores, NEWoMan Takanawa is the largest development in LUMINE's history. The garden floor alone offers more than 1,000 restaurant seats. There is no awkward gap after a meeting spent looking for somewhere to continue.</p>
+    <div class="duo rv" style="margin-top:clamp(30px,4.5vw,48px)">
+      <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-18.webp" alt="Assorted sushi"></div>
+      <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-19.webp" alt="Fresh oysters and wine"></div>
+    </div>
+    <div class="duo rv" style="margin-top:clamp(12px,2vw,22px)">
+      <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-20.webp" alt="Noren curtain for soba, sake, and cuisine"></div>
+      <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-21.webp" alt="Steakhouse sign"></div>
+    </div>
+  </div>
+</section>
+
+<!-- BAND 2 -->
+<section class="band">
+  <div class="bg"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-22.webp" alt="Plaza outside Takanawa Gateway Station"></div>
+  <div class="t">From the ticket gate without opening an umbrella.<small>DIRECTLY CONNECTED</small></div>
+</section>
+
+<!-- ACCESS -->
+<section class="chap pad" id="access">
+  <div class="wrap">
+    <div class="head">
+      <div class="no rv">05</div>
+      <div class="rv">
+        <div class="en">ACCESS</div>
+        <h2>The value of a place<br>that is impossible to miss.</h2>
+        <p class="desc">There is almost no need to explain directions. “Get off at Takanawa Gateway Station and meet just outside the ticket gate” is enough.</p>
+      </div>
+    </div>
+
+    <div class="duo rv">
+      <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-23.webp" alt="Takanawa Gateway Station and its large roof"></div>
+      <div class="ph ls"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-24.webp" alt="Marble-lined indoor walkway"></div>
+    </div>
+
+    <table class="tbl rv">
+      <tr><th>Nearest station</th><td>Directly connected to JR Takanawa Gateway Station (Yamanote and Keihin-Tohoku lines)</td></tr>
+      <tr><th>From Tokyo Station</th><td>About 8 minutes on the Keihin-Tohoku/Negishi Line</td></tr>
+      <tr><th>From Shibuya / Shinjuku</th><td>About 14 / 21 minutes on the inner-loop Yamanote Line</td></tr>
+      <tr><th>From Shinagawa</th><td>One JR stop, approximately 0.9 km</td></tr>
+      <tr><th>Haneda Airport</th><td>About 15 minutes to Terminal 3 by Keikyu Airport Limited Express from Sengakuji Station, a two-minute walk away</td></tr>
+      <tr><th>Narita Airport</th><td>Daily limousine bus service to Takanawa Gateway Station and JW Marriott Hotel Tokyo</td></tr>
+      <tr><th>Other rail lines</th><td>Two-minute walk to Sengakuji Station (Keikyu Main Line and Toei Asakusa Line)</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="chap pad">
+  <div class="wrap">
+    <div class="duo close" style="align-items:center">
+      <div class="rv">
+        <div class="kicker">INVITATION</div>
+        <h2>Let us show you<br>the setting in person.</h2>
+        <p style="margin-top:22px;max-width:36em">This is a place understood more quickly by going upstairs than by reading about it. Come before or after a business meeting, or simply to see the space. Tell us a time that works for you.</p>
+        <a class="cta" href="mailto:info@art-soul.co.jp?subject=Takanawa%20Meeting%20or%20Visit%20Request">Request a Meeting or Visit</a>
+        <a class="cta secondary" href="../">Art&amp;Soul Home</a>
+      </div>
+      <div class="ph ls rv"><img loading="lazy" decoding="async" src="../../takanawa/assets/photo-25.webp" alt="Interior walkway at NEWoMan Takanawa"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="mark">ART&amp;SOUL<b>&nbsp;/&nbsp;</b>TAKANAWA GATEWAY MEETING BASE</div>
+        <p style="max-width:36em">Takanawa, Minato-ku, Tokyo 108-0074, Japan<br>TAKANAWA GATEWAY CITY / THE LINKPILLAR 1<br>Directly connected to JR Takanawa Gateway Station<br>By appointment only; no dedicated reception desk (meeting point provided upon confirmation)</p>
+      </div>
+      <div>
+        <p style="color:var(--ink3);font-size:11px;letter-spacing:.22em;margin-bottom:12px">CONTACT</p>
+        <p>Contact us by email to arrange a meeting or a visit to the base.</p>
+        <a class="cta" href="mailto:info@art-soul.co.jp?subject=%E9%AB%98%E8%BC%AA%E3%82%B2%E3%83%BC%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A4%E3%83%BB%E3%83%9F%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%99%E3%83%BC%E3%82%B9%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87">info@art-soul.co.jp</a>
+      </div>
+    </div>
+    <div class="fnote">
+      The photographs on this page were taken on location at TAKANAWA GATEWAY CITY. Art&amp;Soul Co., Ltd. uses several locations within the development according to the nature of each meeting.<br>
+      Facility information is based on official announcements and was checked on August 9, 2026. Prices, operating hours, and services are subject to change.
+      <span class="source-links">
+        <a href="https://www.takanawagateway-city.com/ja/" target="_blank" rel="noopener">TAKANAWA GATEWAY CITY Official Site</a>
+        <a href="https://www.newoman.jp/takanawa/" target="_blank" rel="noopener">NEWoMan Takanawa Official Site</a>
+        <a href="https://www.marriott.com/en-us/hotels/tyojw-jw-marriott-hotel-tokyo/overview/" target="_blank" rel="noopener">JW Marriott Hotel Tokyo Official Site</a>
+        <a href="https://bunkitsu.jp/news/79/" target="_blank" rel="noopener">BUNKITSU TOKYO Official Site</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  var onScroll=function(){ nav.classList.toggle('on', window.scrollY>60); };
+  onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e,i){ e.style.transitionDelay=(Math.min(i%4,3)*70)+'ms'; io.observe(e); });
+  // 保険：何らかの理由で発火しなかった要素は必ず表示する
+  setTimeout(function(){
+    els.forEach(function(e){
+      if(e.classList.contains('in')) return;
+      var r=e.getBoundingClientRect();
+      if(r.top < window.innerHeight*1.2) e.classList.add('in');
+    });
+  },2200);
+  window.addEventListener('load',function(){
+    setTimeout(function(){
+      var stuck=els.filter(function(e){return !e.classList.contains('in')});
+      if(stuck.length===els.length) els.forEach(function(e){e.classList.add('in')});
+    },1200);
+  });
+})();
+</script>
+</body>
+</html>
