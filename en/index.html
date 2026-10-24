@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Art&amp;Soul is an executive AI consulting firm connecting corporate strategy with practical generative AI implementation.">
+    <link rel="canonical" href="https://art-soul.co.jp/en/">
+    <link rel="alternate" hreflang="ja" href="https://art-soul.co.jp/">
+    <link rel="alternate" hreflang="en" href="https://art-soul.co.jp/en/">
+    <link rel="alternate" hreflang="x-default" href="https://art-soul.co.jp/">
+    <title>Art&amp;Soul | Executive AI Consulting</title>
+    <style>
+        :root {
+            --ink: #111111;
+            --charcoal: #181715;
+            --graphite: #23211d;
+            --ivory: #f7f2e8;
+            --bone: #e6ded0;
+            --muted: #8c8374;
+            --gold: #c7a45a;
+            --gold-bright: #e2c782;
+            --line: rgba(199, 164, 90, 0.24);
+            --white-line: rgba(255, 255, 255, 0.16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+            line-height: 1.7;
+            color: var(--ink);
+            background: var(--ivory);
+            overflow-x: hidden;
+            font-feature-settings: "palt";
+        }
+
+        a {
+            color: inherit;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(14, 14, 13, 0.72);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(18px);
+            transition: background 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        header.scrolled {
+            background: rgba(12, 12, 11, 0.94);
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.34);
+        }
+
+        nav {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 1.15rem 3.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-image {
+            height: 44px;
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.22));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .language-switch {
+            margin-left: 2rem;
+            padding: 0.48rem 0.72rem;
+            border: 1px solid rgba(226, 199, 130, 0.5);
+            color: var(--gold-bright);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+        }
+
+        .language-switch:hover {
+            color: #ffffff;
+            border-color: var(--gold-bright);
+            background: rgba(226, 199, 130, 0.1);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 0.78rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.25s ease;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -0.55rem;
+            width: 100%;
+            height: 1px;
+            background: var(--gold-bright);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-bright);
+        }
+
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            align-items: center;
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            color: #ffffff;
+            background:
+                linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+                radial-gradient(ellipse at 50% 0%, rgba(199, 164, 90, 0.14), transparent 48%),
+                linear-gradient(135deg, #0a0a09 0%, #171511 42%, #252119 100%);
+            background-size: 80px 80px, 80px 80px, auto, auto;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            opacity: 0.34;
+            background:
+                repeating-linear-gradient(28deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 8px),
+                repeating-linear-gradient(118deg, rgba(0, 0, 0, 0.24) 0 1px, transparent 1px 11px);
+            mix-blend-mode: soft-light;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 8rem 6vw 5rem;
+            z-index: -1;
+            border: 1px solid rgba(226, 199, 130, 0.22);
+            border-left-color: rgba(255, 255, 255, 0.08);
+            border-right-color: rgba(255, 255, 255, 0.08);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            width: min(1320px, calc(100% - 7rem));
+            margin: 0 auto;
+            padding-top: 7rem;
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.72fr);
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--gold-bright);
+            font-size: 0.76rem;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            margin-bottom: 1.8rem;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 58px;
+            height: 1px;
+            background: var(--gold-bright);
+        }
+
+        h1 {
+            max-width: 920px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(3.8rem, 7.6vw, 8.7rem);
+            line-height: 0.93;
+            font-weight: 400;
+            letter-spacing: 0;
+        }
+
+        .hero-copy {
+            max-width: 720px;
+            margin-top: 2.4rem;
+            color: rgba(255, 255, 255, 0.78);
+            font-size: clamp(1rem, 1.7vw, 1.28rem);
+            font-weight: 300;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 3.1rem;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 58px;
+            padding: 0 2rem;
+            text-decoration: none;
+            border: 1px solid var(--gold);
+            color: #17120b;
+            background: linear-gradient(135deg, #e6cf8b 0%, #bd9650 100%);
+            font-size: 0.86rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(199, 164, 90, 0.24);
+        }
+
+        .button.secondary {
+            color: rgba(255, 255, 255, 0.88);
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(255, 255, 255, 0.24);
+        }
+
+        .button.secondary:hover {
+            border-color: var(--gold-bright);
+            box-shadow: none;
+        }
+
+        .hero-mark {
+            position: relative;
+            display: grid;
+            place-items: center;
+            min-height: 520px;
+        }
+
+        .hero-mark::before,
+        .hero-mark::after {
+            content: "";
+            position: absolute;
+            border: 1px solid rgba(226, 199, 130, 0.25);
+        }
+
+        .hero-mark::before {
+            width: min(34vw, 420px);
+            aspect-ratio: 1;
+            transform: rotate(45deg);
+        }
+
+        .hero-mark::after {
+            width: min(30vw, 360px);
+            aspect-ratio: 1;
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .hero-logo {
+            width: min(30vw, 390px);
+            max-width: 100%;
+            filter: drop-shadow(0 30px 72px rgba(199, 164, 90, 0.32));
+            position: relative;
+            z-index: 1;
+        }
+
+        .signal-strip {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: min(1320px, calc(100% - 7rem));
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border: 1px solid rgba(226, 199, 130, 0.22);
+            border-bottom: none;
+            background: rgba(11, 11, 10, 0.76);
+            backdrop-filter: blur(18px);
+        }
+
+        .signal {
+            padding: 1.5rem 2rem;
+            border-right: 1px solid rgba(226, 199, 130, 0.16);
+        }
+
+        .signal:last-child {
+            border-right: none;
+        }
+
+        .signal strong {
+            display: block;
+            color: #ffffff;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.65rem;
+            font-weight: 400;
+            line-height: 1;
+            margin-bottom: 0.55rem;
+        }
+
+        .signal span {
+            color: rgba(255, 255, 255, 0.56);
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        section {
+            padding: 8.5rem 3.5rem;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+        }
+
+        .section-kicker {
+            color: var(--gold);
+            font-size: 0.78rem;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            max-width: 880px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.5rem, 5vw, 5.6rem);
+            line-height: 1;
+            font-weight: 400;
+            letter-spacing: 0;
+            color: var(--ink);
+        }
+
+        .section-subtitle {
+            max-width: 760px;
+            margin-top: 1.8rem;
+            color: #5e5549;
+            font-size: 1.08rem;
+            font-weight: 300;
+        }
+
+        .services {
+            background:
+                linear-gradient(90deg, rgba(17, 17, 17, 0.055) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(17, 17, 17, 0.045) 1px, transparent 1px),
+                var(--ivory);
+            background-size: 72px 72px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 5rem;
+            border-top: 1px solid rgba(17, 17, 17, 0.16);
+            border-left: 1px solid rgba(17, 17, 17, 0.16);
+        }
+
+        .service-card {
+            min-height: 330px;
+            padding: 2.6rem;
+            background: rgba(255, 255, 255, 0.36);
+            border-right: 1px solid rgba(17, 17, 17, 0.16);
+            border-bottom: 1px solid rgba(17, 17, 17, 0.16);
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            background: rgba(255, 255, 255, 0.72);
+            transform: translateY(-4px);
+        }
+
+        .service-index {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--gold);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 0.98rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .service-index::after {
+            content: "";
+            width: 44px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .service-card h3 {
+            font-size: 1.36rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            margin-bottom: 1.2rem;
+            color: var(--ink);
+        }
+
+        .service-card p {
+            color: #61584c;
+            font-weight: 300;
+        }
+
+        .features {
+            color: #ffffff;
+            background:
+                linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+                linear-gradient(135deg, #11100f 0%, #1e1b17 55%, #2a251d 100%);
+            background-size: 88px 88px, 88px 88px, auto;
+            overflow: hidden;
+        }
+
+        .features::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0.28;
+            background:
+                repeating-linear-gradient(35deg, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 13px);
+            pointer-events: none;
+        }
+
+        .features .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .features .section-title {
+            color: #ffffff;
+        }
+
+        .features .section-subtitle {
+            color: rgba(255, 255, 255, 0.66);
+        }
+
+        .features-layout {
+            display: grid;
+            grid-template-columns: minmax(280px, 0.78fr) 1fr;
+            gap: 5.5rem;
+            align-items: center;
+        }
+
+        .feature-image {
+            min-height: 560px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--line);
+            position: relative;
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.01)),
+                rgba(255, 255, 255, 0.025);
+        }
+
+        .feature-image::before,
+        .feature-image::after {
+            content: "";
+            position: absolute;
+            inset: 3.2rem;
+            border: 1px solid rgba(226, 199, 130, 0.2);
+        }
+
+        .feature-image::after {
+            inset: 5rem;
+            transform: rotate(45deg);
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .feature-image img {
+            max-width: min(70%, 360px);
+            position: relative;
+            z-index: 1;
+            filter: drop-shadow(0 28px 58px rgba(199, 164, 90, 0.26));
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 3.8rem;
+            border-top: 1px solid var(--white-line);
+        }
+
+        .feature-list li {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 2rem;
+            padding: 2.1rem 0;
+            border-bottom: 1px solid var(--white-line);
+            color: rgba(255, 255, 255, 0.68);
+            font-weight: 300;
+        }
+
+        .feature-list strong {
+            display: block;
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.45rem;
+        }
+
+        .feature-list span {
+            color: var(--gold-bright);
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .approach {
+            background: #ffffff;
+            padding-top: 0;
+        }
+
+        .approach-band {
+            display: grid;
+            grid-template-columns: 0.8fr 1fr;
+            gap: 5rem;
+            padding: 7rem 0;
+            border-bottom: 1px solid rgba(17, 17, 17, 0.14);
+        }
+
+        .approach-text {
+            color: #5f564a;
+            font-size: 1.08rem;
+            font-weight: 300;
+        }
+
+        .principles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            margin-top: 4rem;
+            background: rgba(17, 17, 17, 0.13);
+        }
+
+        .principle {
+            background: #ffffff;
+            padding: 2.4rem;
+        }
+
+        .principle span {
+            color: var(--gold);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.8rem;
+        }
+
+        .principle h3 {
+            margin: 1.8rem 0 0.9rem;
+            font-size: 1.15rem;
+            letter-spacing: 0.05em;
+        }
+
+        .principle p {
+            color: #645b50;
+            font-weight: 300;
+        }
+
+        .meeting-base {
+            position: relative;
+            min-height: 680px;
+            display: grid;
+            align-items: end;
+            color: #ffffff;
+            isolation: isolate;
+            overflow: hidden;
+            background: #11130f;
+        }
+
+        .meeting-base::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            background: url("../takanawa/assets/photo-01.webp") center 42% / cover no-repeat;
+            transform: scale(1.015);
+        }
+
+        .meeting-base::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(90deg, rgba(7, 9, 7, 0.94) 0%, rgba(7, 9, 7, 0.73) 47%, rgba(7, 9, 7, 0.25) 100%),
+                        linear-gradient(0deg, rgba(7, 9, 7, 0.78), transparent 50%);
+        }
+
+        .meeting-base-content {
+            max-width: 760px;
+            padding-bottom: 1rem;
+        }
+
+        .meeting-base .section-title {
+            color: #ffffff;
+            max-width: 760px;
+        }
+
+        .meeting-base .section-subtitle {
+            color: rgba(255, 255, 255, 0.76);
+            max-width: 680px;
+        }
+
+        .meeting-base-meta {
+            margin-top: 1.5rem;
+            color: var(--gold-bright);
+            font-size: 0.76rem;
+            letter-spacing: 0.18em;
+        }
+
+        .company-info {
+            color: #ffffff;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 38%),
+                var(--charcoal);
+        }
+
+        .company-info .section-title {
+            color: #ffffff;
+        }
+
+        .company-info .section-subtitle {
+            color: rgba(255, 255, 255, 0.62);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            margin-top: 5rem;
+            background: var(--white-line);
+            border: 1px solid var(--white-line);
+        }
+
+        .info-item {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 2rem;
+            padding: 1.7rem 2rem;
+            background: var(--charcoal);
+        }
+
+        .info-label {
+            color: var(--gold-bright);
+            font-size: 0.76rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .info-value {
+            color: rgba(255, 255, 255, 0.84);
+            font-weight: 300;
+        }
+
+        .contact {
+            text-align: center;
+            color: #ffffff;
+            background:
+                linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+                #0c0c0b;
+            background-size: 80px 80px;
+        }
+
+        .contact .section-title,
+        .contact .section-subtitle {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact .section-title {
+            color: #ffffff;
+        }
+
+        .contact .section-subtitle {
+            color: rgba(255, 255, 255, 0.68);
+        }
+
+        .contact-actions {
+            margin-top: 3.2rem;
+        }
+
+        footer {
+            background: #080807;
+            color: rgba(255, 255, 255, 0.46);
+            padding: 2.2rem 3.5rem;
+            font-size: 0.78rem;
+            letter-spacing: 0.12em;
+        }
+
+        .footer-inner {
+            max-width: 1320px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        @media (max-width: 1040px) {
+            nav {
+                padding: 1rem 2rem;
+            }
+
+            .hero-content,
+            .features-layout,
+            .approach-band {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content,
+            .signal-strip {
+                width: min(100% - 4rem, 980px);
+            }
+
+            .hero-mark {
+                min-height: 360px;
+            }
+
+            .hero-logo {
+                width: min(58vw, 330px);
+            }
+
+            .hero-mark::before {
+                width: min(62vw, 360px);
+            }
+
+            .hero-mark::after {
+                width: min(54vw, 310px);
+            }
+
+            .signal-strip,
+            .services-grid,
+            .principles,
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .signal,
+            .signal:last-child {
+                border-right: none;
+                border-bottom: 1px solid rgba(226, 199, 130, 0.16);
+            }
+
+            .signal:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .nav-links {
+                display: none;
+            }
+
+            .logo-image {
+                height: 36px;
+            }
+
+            .language-switch {
+                margin-left: auto;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero::after {
+                inset: 5.8rem 1rem 3rem;
+            }
+
+            .hero-content {
+                width: calc(100% - 2rem);
+                gap: 0.5rem;
+                padding-top: 6rem;
+                padding-bottom: 2rem;
+            }
+
+            h1 {
+                font-size: clamp(3.05rem, 15vw, 4.35rem);
+            }
+
+            .hero-copy {
+                font-size: 1rem;
+            }
+
+            .hero-actions,
+            .footer-inner {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .button {
+                width: 100%;
+                padding: 0 1.1rem;
+            }
+
+            .hero-mark {
+                min-height: 220px;
+                overflow: hidden;
+            }
+
+            .hero-logo {
+                width: min(66vw, 250px);
+            }
+
+            .hero-mark::before {
+                width: min(72vw, 285px);
+            }
+
+            .hero-mark::after {
+                width: min(62vw, 245px);
+            }
+
+            .signal-strip {
+                position: relative;
+                width: calc(100% - 2rem);
+                margin: 0 auto;
+                left: auto;
+                bottom: auto;
+                transform: none;
+            }
+
+            section {
+                padding: 5.8rem 1.25rem;
+            }
+
+            .section-title {
+                font-size: clamp(2.35rem, 12vw, 3.45rem);
+            }
+
+            .services-grid {
+                margin-top: 3.2rem;
+            }
+
+            .service-card {
+                min-height: auto;
+                padding: 2.1rem;
+            }
+
+            .feature-image {
+                min-height: 360px;
+            }
+
+            .feature-list li,
+            .info-item {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .approach-band {
+                padding: 4.8rem 0;
+            }
+
+            footer {
+                padding: 2rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#top" aria-label="Art&amp;Soul top">
+                <img src="../Art-Soul-09.png" alt="Art&amp;Soul" class="logo-image">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#features">Advantage</a></li>
+                <li><a href="#approach">Approach</a></li>
+                <li><a href="./takanawa/">Takanawa</a></li>
+                <li><a href="#company">Company</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a class="language-switch" href="../" lang="ja" hreflang="ja" aria-label="日本語で表示">日本語</a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="hero" aria-label="Art&amp;Soul executive AI consulting">
+            <div class="hero-content">
+                <div>
+                    <div class="eyebrow">Executive AI Consulting</div>
+                    <h1>Art&amp;Soul</h1>
+                    <p class="hero-copy">
+                        We connect executive decision-making, organizational transformation, and frontline implementation along one strategic path. Art&amp;Soul is the executive partner that turns generative AI into enterprise value.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="button">Private Consultation</a>
+                        <a href="#services" class="button secondary">View Services</a>
+                    </div>
+                </div>
+                <div class="hero-mark" aria-hidden="true">
+                    <img src="../Art-Soul-04.png" alt="" class="hero-logo">
+                </div>
+            </div>
+
+            <div class="signal-strip" aria-label="consulting highlights">
+                <div class="signal">
+                    <strong>Strategy</strong>
+                    <span>Executive agenda design</span>
+                </div>
+                <div class="signal">
+                    <strong>AI Build</strong>
+                    <span>No-code to custom systems</span>
+                </div>
+                <div class="signal">
+                    <strong>Adoption</strong>
+                    <span>Leadership enablement</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-kicker">Services</div>
+                <h2 class="section-title">Make AI part of your executive decision system.</h2>
+                <p class="section-subtitle">
+                    From framing top-management priorities to implementation, leadership training, and operational adoption, our focused team supports AI transformation where confidentiality and speed are essential.
+                </p>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-index">01</div>
+                        <h3>AI Strategy Consulting</h3>
+                        <p>We clarify management priorities, competitive advantage, and return on investment to define an AI roadmap and the right order of implementation.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-index">02</div>
+                        <h3>No-Code AI Development</h3>
+                        <p>Using Claude, ChatGPT, NotebookLM, and related tools, we build practical AI solutions that can be validated quickly.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-index">03</div>
+                        <h3>Executive AI Programs</h3>
+                        <p>We provide hands-on programs and decision frameworks that enable executives to use AI as a management instrument.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-index">04</div>
+                        <h3>Digital Transformation</h3>
+                        <p>We work alongside your teams to redesign operations, activate data, and establish cross-functional delivery structures.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-index">05</div>
+                        <h3>Custom AI Solutions</h3>
+                        <p>Our scope ranges from industry-specific AI applications and internal knowledge systems to integration with existing platforms.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-index">06</div>
+                        <h3>Innovation Support</h3>
+                        <p>We support new ventures and product initiatives, from identifying AI opportunities to structuring the path to commercialization.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="features-layout">
+                    <div class="feature-image">
+                        <img src="../Art-Soul-04.png" alt="Art&amp;Soul">
+                    </div>
+
+                    <div>
+                        <div class="section-kicker">Advantage</div>
+                        <h2 class="section-title">An AI partner built for implementation, not just ideas.</h2>
+                        <p class="section-subtitle">
+                            By working on strategic design and frontline implementation at the same time, we keep the focus on outcomes after deployment.
+                        </p>
+
+                        <ul class="feature-list">
+                            <li>
+                                <span>01</span>
+                                <div>
+                                    <strong>Executive-Level Consulting</strong>
+                                    We evaluate business impact, organizational capability, and execution risk together to build an AI strategy robust enough for executive decisions.
+                                </div>
+                            </li>
+                            <li>
+                                <span>02</span>
+                                <div>
+                                    <strong>Practical Use of Leading AI</strong>
+                                    We connect generative AI platforms such as Claude, GPT, and Gemini directly to business processes and decision workflows.
+                                </div>
+                            </li>
+                            <li>
+                                <span>03</span>
+                                <div>
+                                    <strong>No-Code Development Expertise</strong>
+                                    We move from rapid prototypes to durable operational systems through a deliberate, staged approach.
+                                </div>
+                            </li>
+                            <li>
+                                <span>04</span>
+                                <div>
+                                    <strong>Executive Adoption</strong>
+                                    We enable leaders to use AI themselves, make informed decisions, and extend effective practices across the organization.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="approach" class="approach">
+            <div class="container">
+                <div class="approach-band">
+                    <div>
+                        <div class="section-kicker">Approach</div>
+                        <h2 class="section-title">A focused team for quiet, profound transformation.</h2>
+                    </div>
+                    <p class="approach-text">
+                        Successful AI adoption depends on more than tool selection. It requires clarity about management priorities, usability in real work, sound information governance, and an operating model that can keep improving. Art&amp;Soul connects strategy, validation, implementation, and adoption into the shortest practical path for each organization.
+                    </p>
+                </div>
+
+                <div class="principles">
+                    <div class="principle">
+                        <span>01</span>
+                        <h3>Executive Alignment</h3>
+                        <p>We align the issues executives must decide first, then define a clear purpose for AI.</p>
+                    </div>
+                    <div class="principle">
+                        <span>02</span>
+                        <h3>Rapid Prototyping</h3>
+                        <p>We validate early in usable form and judge progress by real operational change, not abstract claims.</p>
+                    </div>
+                    <div class="principle">
+                        <span>03</span>
+                        <h3>Operational Discipline</h3>
+                        <p>We design post-launch operating quality, including security, training, and continuous improvement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="meeting-base" aria-labelledby="meeting-base-title">
+            <div class="container">
+                <div class="meeting-base-content">
+                    <div class="section-kicker">Takanawa Meeting Base</div>
+                    <h2 id="meeting-base-title" class="section-title">Choose the setting to fit the conversation.</h2>
+                    <p class="section-subtitle">
+                        Art&amp;Soul uses Takanawa Gateway City as a meeting base by appointment. A garden high above the city, a hotel lounge, or a meeting room surrounded by books—we select a setting suited to the people, the subject, and conversations that should not be rushed.
+                    </p>
+                    <p class="meeting-base-meta">Directly connected to JR Takanawa Gateway Station / By appointment only</p>
+                    <div class="hero-actions">
+                        <a href="./takanawa/" class="button">Explore Takanawa</a>
+                        <a href="mailto:info@art-soul.co.jp?subject=Takanawa%20Meeting%20Request" class="button secondary">Request a Meeting</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="company" class="company-info">
+            <div class="container">
+                <div class="section-kicker">Company</div>
+                <h2 class="section-title">Corporate Information</h2>
+                <p class="section-subtitle">Art&amp;Soul provides AI consulting and executive-level support for practical AI adoption.</p>
+
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Company Name</div>
+                        <div class="info-value">Art&amp;Soul Co., Ltd.</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Established</div>
+                        <div class="info-value">January 14, 2020</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Capital</div>
+                        <div class="info-value">JPY 1,000,000</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">CEO</div>
+                        <div class="info-value">Hirotaka Konishi</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Head Office</div>
+                        <div class="info-value">2-10-10 Tatekawa, Sumida-ku,<br>Tokyo 130-0023, Japan</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Business</div>
+                        <div class="info-value">AI Consulting<br>Executive AI Programs<br>No-Code AI Development<br>Digital Transformation Support</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Corporate Number</div>
+                        <div class="info-value">0106-01-056732</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-kicker">Contact</div>
+                <h2 class="section-title">Frame AI transformation in the language of management.</h2>
+                <p class="section-subtitle">Contact us about AI strategy, executive programs, no-code AI development, or digital transformation.</p>
+                <div class="contact-actions">
+                    <a href="mailto:info@art-soul.co.jp" class="button">Request Consultation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; 2026 Art&amp;Soul Co., Ltd. All rights reserved.</p>
+            <p>Executive AI Consulting Partner</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            const header = document.querySelector("header");
+            header.classList.toggle("scrolled", window.pageYOffset > 80);
+        });
+    </script>
+</body>
+</html>

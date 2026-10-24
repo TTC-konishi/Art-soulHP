@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Art&amp;Soul株式会社は、経営戦略と生成AI実装を接続するエグゼクティブAIコンサルティングファームです。">
+    <link rel="canonical" href="https://art-soul.co.jp/">
+    <link rel="alternate" hreflang="ja" href="https://art-soul.co.jp/">
+    <link rel="alternate" hreflang="en" href="https://art-soul.co.jp/en/">
+    <link rel="alternate" hreflang="x-default" href="https://art-soul.co.jp/">
     <title>Art&amp;Soul株式会社 | Executive AI Consulting</title>
     <style>
         :root {
@@ -79,6 +83,25 @@
             gap: 3rem;
             list-style: none;
             align-items: center;
+            margin-left: auto;
+        }
+
+        .language-switch {
+            margin-left: 2rem;
+            padding: 0.48rem 0.72rem;
+            border: 1px solid rgba(226, 199, 130, 0.5);
+            color: var(--gold-bright);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+        }
+
+        .language-switch:hover {
+            color: #ffffff;
+            border-color: var(--gold-bright);
+            background: rgba(226, 199, 130, 0.1);
         }
 
         .nav-links a {
@@ -755,6 +778,10 @@
                 height: 36px;
             }
 
+            .language-switch {
+                margin-left: auto;
+            }
+
             .hero {
                 min-height: auto;
             }
@@ -866,6 +893,7 @@
                 <li><a href="#company">Company</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <a class="language-switch" href="./en/" lang="en" hreflang="en" aria-label="View this site in English">English</a>
         </nav>
     </header>
 
